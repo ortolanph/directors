@@ -1,0 +1,1123 @@
+2026-01-13T09:35:30.501Z  INFO 87092 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Starting DirectorsApplication using Java 17.0.16 with PID 87092 (/Users/portolan/projects/personal/directors/build/classes/java/main started by portolan in /Users/portolan/projects/personal/directors)
+2026-01-13T09:35:30.503Z DEBUG 87092 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-01-13T09:35:30.504Z  INFO 87092 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-01-13T09:35:30.525Z  INFO 87092 --- [Director List] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-13T09:35:30.525Z  INFO 87092 --- [Director List] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-13T09:35:30.530Z  INFO 87092 --- [Director List] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file /Users/portolan/projects/personal/directors/compose.yaml
+2026-01-13T09:35:31.110Z  INFO 87092 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network directors_guestbooknetwork  Creating
+2026-01-13T09:35:31.160Z  INFO 87092 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network directors_guestbooknetwork  Created
+2026-01-13T09:35:31.161Z  INFO 87092 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Creating
+2026-01-13T09:35:31.227Z  INFO 87092 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Created
+2026-01-13T09:35:31.233Z  INFO 87092 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Starting
+2026-01-13T09:35:31.421Z  INFO 87092 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Started
+2026-01-13T09:35:31.421Z  INFO 87092 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Waiting
+2026-01-13T09:35:31.923Z  INFO 87092 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Healthy
+2026-01-13T09:35:33.615Z  INFO 87092 --- [Director List] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-13T09:35:33.634Z  INFO 87092 --- [Director List] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 1 JPA repository interface.
+2026-01-13T09:35:33.722Z  INFO 87092 --- [Director List] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d071242f-9feb-37a8-9b51-eab35915e1b2
+2026-01-13T09:35:33.975Z  INFO 87092 --- [Director List] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-01-13T09:35:33.980Z  INFO 87092 --- [Director List] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-13T09:35:33.980Z  INFO 87092 --- [Director List] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-13T09:35:34.002Z  INFO 87092 --- [Director List] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 729 ms
+2026-01-13T09:35:34.254Z  INFO 87092 --- [Director List] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:9091/directors_db?ApplicationName=Director+List (PostgreSQL 18.0)
+2026-01-13T09:35:34.284Z  INFO 87092 --- [Director List] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "director_schema"."flyway_schema_history" does not exist yet
+2026-01-13T09:35:34.287Z  INFO 87092 --- [Director List] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.010s)
+2026-01-13T09:35:34.306Z  INFO 87092 --- [Director List] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "director_schema"."flyway_schema_history" ...
+2026-01-13T09:35:34.358Z  INFO 87092 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "director_schema": << Empty Schema >>
+2026-01-13T09:35:34.363Z  INFO 87092 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "director_schema" to version "1 - directors table"
+2026-01-13T09:35:34.384Z  INFO 87092 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "director_schema", now at version v1 (execution time 00:00.010s)
+2026-01-13T09:35:34.415Z  INFO 87092 --- [Director List] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-13T09:35:34.432Z  INFO 87092 --- [Director List] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@247ed553
+2026-01-13T09:35:34.433Z  INFO 87092 --- [Director List] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-13T09:35:34.446Z  INFO 87092 --- [Director List] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-13T09:35:34.470Z  INFO 87092 --- [Director List] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-01-13T09:35:34.668Z  INFO 87092 --- [Director List] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-13T09:35:34.704Z  INFO 87092 --- [Director List] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:9091/directors_db?ApplicationName=Director+List]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: directors_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-13T09:35:35.006Z  INFO 87092 --- [Director List] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-13T09:35:35.007Z  INFO 87092 --- [Director List] [restartedMain] org.hibernate.orm.jdbc.batch             : HHH100501: Automatic JDBC statement batching enabled (maximum batch size 10)
+2026-01-13T09:35:35.009Z  INFO 87092 --- [Director List] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-13T09:35:35.056Z  INFO 87092 --- [Director List] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-13T09:35:35.148Z  WARN 87092 --- [Director List] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-13T09:35:35.327Z DEBUG 87092 --- [Director List] [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : File system access not preferred: using SpringTemplateLoader
+2026-01-13T09:35:35.367Z  INFO 87092 --- [Director List] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-01-13T09:35:35.398Z  INFO 87092 --- [Director List] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-01-13T09:35:35.405Z  INFO 87092 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Started DirectorsApplication in 5.121 seconds (process running for 5.481)
+2026-01-13T09:35:46.507Z  INFO 87092 --- [Director List] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-13T09:35:46.507Z  INFO 87092 --- [Director List] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-13T09:35:46.508Z  INFO 87092 --- [Director List] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-01-13T09:35:46.543Z  WARN 87092 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobOperator      : Attempting to launch job: [Directors-Job] which defines an incrementer with additional parameters: [{JobParameter{name='executionId', value=dda26f0d-bb73-478c-88f3-64be749584c9, type=class java.lang.String, identifying=true},JobParameter{name='startedAt', value=1768296946525, type=class java.lang.Long, identifying=true}}]. Additional parameters will be ignored.
+2026-01-13T09:35:46.543Z  INFO 87092 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobOperator      : Launching next instance of job: [Directors-Job] with parameters: [{JobParameter{name='run.id', value=1, type=class java.lang.Long, identifying=true}}]
+2026-01-13T09:35:46.544Z  INFO 87092 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobLauncher      : Job: [SimpleJob: [name=Directors-Job]] launched with the following parameters: [{JobParameter{name='run.id', value=1, type=class java.lang.Long, identifying=true}}]
+2026-01-13T09:35:46.547Z  INFO 87092 --- [Director List] [http-nio-9090-exec-1] o.s.batch.core.job.SimpleStepHandler     : Executing step: [Director-Step-Import]
+2026-01-13T09:35:46.551Z ERROR 87092 --- [Director List] [http-nio-9090-exec-1] o.s.b.core.step.item.ChunkOrientedStep   : Rolling back chunk transaction
+
+org.springframework.batch.infrastructure.item.file.FlatFileParseException: Parsing error at line: 2 in resource=[file [/Users/portolan/projects/personal/directors/data/directors.csv]], input=[Abbas Kiarostami,119294]
+	at org.springframework.batch.infrastructure.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:221) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.support.AbstractItemCountingItemStreamItemReader.read(AbstractItemCountingItemStreamItemReader.java:92) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.doRead(ChunkOrientedStep.java:559) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.readItem(ChunkOrientedStep.java:512) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.readChunk(ChunkOrientedStep.java:490) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processChunkSequentially(ChunkOrientedStep.java:443) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processNextChunk(ChunkOrientedStep.java:389) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.lambda$doExecute$0(ChunkOrientedStep.java:373) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.transaction.support.TransactionOperations.lambda$executeWithoutResult$0(TransactionOperations.java:68) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:137) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.support.TransactionOperations.executeWithoutResult(TransactionOperations.java:67) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.doExecute(ChunkOrientedStep.java:368) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:247) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:131) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:397) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:129) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:293) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher$1.run(TaskExecutorJobLauncher.java:220) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:61) ~[spring-core-7.0.2.jar:7.0.2]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.launchJobExecution(TaskExecutorJobLauncher.java:211) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.run(TaskExecutorJobLauncher.java:109) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.SimpleJobOperator.startNextInstance(SimpleJobOperator.java:294) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobOperator.startNextInstance(TaskExecutorJobOperator.java:133) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.SimpleJobOperator.start(SimpleJobOperator.java:199) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobOperator.start(TaskExecutorJobOperator.java:117) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:370) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222) ~[spring-aop-7.0.2.jar:7.0.2]
+	at jdk.proxy2/jdk.proxy2.$Proxy159.start(Unknown Source) ~[na:na]
+	at pt.pauloortolan.directors.controllers.BatchController.startDirectorsJob(BatchController.java:33) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.15.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.15.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: java.lang.IllegalStateException: Method not found: pt.pauloortolan.directors.pojo.DirectorImportPOJO.<init>()
+	at org.springframework.util.ReflectionUtils.handleReflectionException(ReflectionUtils.java:106) ~[spring-core-7.0.2.jar:7.0.2]
+	at org.springframework.batch.infrastructure.item.file.mapping.BeanWrapperFieldSetMapper.getBean(BeanWrapperFieldSetMapper.java:228) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.file.mapping.BeanWrapperFieldSetMapper.mapFieldSet(BeanWrapperFieldSetMapper.java:177) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.file.mapping.DefaultLineMapper.mapLine(DefaultLineMapper.java:44) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:217) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	... 85 common frames omitted
+
+2026-01-13T09:35:46.553Z ERROR 87092 --- [Director List] [http-nio-9090-exec-1] o.s.batch.core.step.AbstractStep         : Encountered an error executing step Director-Step-Import in job Directors-Job
+
+org.springframework.batch.core.step.FatalStepExecutionException: Unable to process chunk
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processChunkSequentially(ChunkOrientedStep.java:458) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processNextChunk(ChunkOrientedStep.java:389) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.lambda$doExecute$0(ChunkOrientedStep.java:373) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.transaction.support.TransactionOperations.lambda$executeWithoutResult$0(TransactionOperations.java:68) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:137) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.support.TransactionOperations.executeWithoutResult(TransactionOperations.java:67) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.doExecute(ChunkOrientedStep.java:368) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:247) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:131) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:397) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:129) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:293) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher$1.run(TaskExecutorJobLauncher.java:220) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:61) ~[spring-core-7.0.2.jar:7.0.2]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.launchJobExecution(TaskExecutorJobLauncher.java:211) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.run(TaskExecutorJobLauncher.java:109) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.SimpleJobOperator.startNextInstance(SimpleJobOperator.java:294) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobOperator.startNextInstance(TaskExecutorJobOperator.java:133) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.SimpleJobOperator.start(SimpleJobOperator.java:199) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobOperator.start(TaskExecutorJobOperator.java:117) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:370) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222) ~[spring-aop-7.0.2.jar:7.0.2]
+	at jdk.proxy2/jdk.proxy2.$Proxy159.start(Unknown Source) ~[na:na]
+	at pt.pauloortolan.directors.controllers.BatchController.startDirectorsJob(BatchController.java:33) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.15.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.15.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: org.springframework.batch.infrastructure.item.file.FlatFileParseException: Parsing error at line: 2 in resource=[file [/Users/portolan/projects/personal/directors/data/directors.csv]], input=[Abbas Kiarostami,119294]
+	at org.springframework.batch.infrastructure.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:221) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.support.AbstractItemCountingItemStreamItemReader.read(AbstractItemCountingItemStreamItemReader.java:92) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.doRead(ChunkOrientedStep.java:559) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.readItem(ChunkOrientedStep.java:512) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.readChunk(ChunkOrientedStep.java:490) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processChunkSequentially(ChunkOrientedStep.java:443) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	... 80 common frames omitted
+Caused by: java.lang.IllegalStateException: Method not found: pt.pauloortolan.directors.pojo.DirectorImportPOJO.<init>()
+	at org.springframework.util.ReflectionUtils.handleReflectionException(ReflectionUtils.java:106) ~[spring-core-7.0.2.jar:7.0.2]
+	at org.springframework.batch.infrastructure.item.file.mapping.BeanWrapperFieldSetMapper.getBean(BeanWrapperFieldSetMapper.java:228) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.file.mapping.BeanWrapperFieldSetMapper.mapFieldSet(BeanWrapperFieldSetMapper.java:177) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.file.mapping.DefaultLineMapper.mapLine(DefaultLineMapper.java:44) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:217) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	... 85 common frames omitted
+
+2026-01-13T09:35:46.554Z  INFO 87092 --- [Director List] [http-nio-9090-exec-1] o.s.batch.core.step.AbstractStep         : Step: [Director-Step-Import] executed in 6ms
+2026-01-13T09:35:46.555Z  INFO 87092 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobLauncher      : Job: [SimpleJob: [name=Directors-Job]] completed with the following parameters: [{JobParameter{name='run.id', value=1, type=class java.lang.Long, identifying=true}}] and the following status: [FAILED] in 8ms
+2026-01-13T09:35:58.142Z  INFO 87092 --- [Director List] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-13T09:35:58.144Z  INFO 87092 --- [Director List] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-01-13T09:35:58.147Z  INFO 87092 --- [Director List] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-13T09:35:58.148Z  INFO 87092 --- [Director List] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-13T09:35:58.149Z  INFO 87092 --- [Director List] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-13T09:36:12.001Z  INFO 87296 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Starting DirectorsApplication using Java 17.0.16 with PID 87296 (/Users/portolan/projects/personal/directors/build/classes/java/main started by portolan in /Users/portolan/projects/personal/directors)
+2026-01-13T09:36:12.002Z DEBUG 87296 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-01-13T09:36:12.003Z  INFO 87296 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-01-13T09:36:12.025Z  INFO 87296 --- [Director List] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-13T09:36:12.026Z  INFO 87296 --- [Director List] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-13T09:36:12.031Z  INFO 87296 --- [Director List] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file /Users/portolan/projects/personal/directors/compose.yaml
+2026-01-13T09:36:12.614Z  INFO 87296 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Starting
+2026-01-13T09:36:12.760Z  INFO 87296 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Started
+2026-01-13T09:36:12.760Z  INFO 87296 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Waiting
+2026-01-13T09:36:13.264Z  INFO 87296 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Healthy
+2026-01-13T09:36:14.991Z  INFO 87296 --- [Director List] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-13T09:36:15.011Z  INFO 87296 --- [Director List] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 1 JPA repository interface.
+2026-01-13T09:36:15.103Z  INFO 87296 --- [Director List] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d071242f-9feb-37a8-9b51-eab35915e1b2
+2026-01-13T09:36:15.358Z  INFO 87296 --- [Director List] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-01-13T09:36:15.363Z  INFO 87296 --- [Director List] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-13T09:36:15.363Z  INFO 87296 --- [Director List] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-13T09:36:15.384Z  INFO 87296 --- [Director List] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 731 ms
+2026-01-13T09:36:15.663Z  INFO 87296 --- [Director List] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:9091/directors_db?ApplicationName=Director+List (PostgreSQL 18.0)
+2026-01-13T09:36:15.705Z  INFO 87296 --- [Director List] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.018s)
+2026-01-13T09:36:15.745Z  INFO 87296 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "director_schema": 1
+2026-01-13T09:36:15.747Z  INFO 87296 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "director_schema" is up to date. No migration necessary.
+2026-01-13T09:36:15.775Z  INFO 87296 --- [Director List] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-13T09:36:15.799Z  INFO 87296 --- [Director List] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@67f61293
+2026-01-13T09:36:15.799Z  INFO 87296 --- [Director List] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-13T09:36:15.812Z  INFO 87296 --- [Director List] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-13T09:36:15.833Z  INFO 87296 --- [Director List] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-01-13T09:36:16.066Z  INFO 87296 --- [Director List] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-13T09:36:16.114Z  INFO 87296 --- [Director List] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:9091/directors_db?ApplicationName=Director+List]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: directors_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-13T09:36:16.495Z  INFO 87296 --- [Director List] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-13T09:36:16.497Z  INFO 87296 --- [Director List] [restartedMain] org.hibernate.orm.jdbc.batch             : HHH100501: Automatic JDBC statement batching enabled (maximum batch size 10)
+2026-01-13T09:36:16.499Z  INFO 87296 --- [Director List] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-13T09:36:20.007Z  INFO 87296 --- [Director List] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-13T09:36:20.118Z  WARN 87296 --- [Director List] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-13T09:36:20.325Z DEBUG 87296 --- [Director List] [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : File system access not preferred: using SpringTemplateLoader
+2026-01-13T09:36:20.370Z  INFO 87296 --- [Director List] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-01-13T09:36:20.403Z  INFO 87296 --- [Director List] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-01-13T09:36:20.410Z  INFO 87296 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Started DirectorsApplication in 8.626 seconds (process running for 9.115)
+2026-01-13T09:36:55.597Z  INFO 87296 --- [Director List] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-13T09:36:55.598Z  INFO 87296 --- [Director List] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-13T09:36:55.602Z  INFO 87296 --- [Director List] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-01-13T09:36:55.670Z  WARN 87296 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobOperator      : Attempting to launch job: [Directors-Job] which defines an incrementer with additional parameters: [{JobParameter{name='executionId', value=c4ca142b-4698-4bdb-bb10-25ffd48949ba, type=class java.lang.String, identifying=true},JobParameter{name='startedAt', value=1768297015641, type=class java.lang.Long, identifying=true}}]. Additional parameters will be ignored.
+2026-01-13T09:36:55.670Z  INFO 87296 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobOperator      : Launching next instance of job: [Directors-Job] with parameters: [{JobParameter{name='run.id', value=1, type=class java.lang.Long, identifying=true}}]
+2026-01-13T09:36:55.671Z  INFO 87296 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobLauncher      : Job: [SimpleJob: [name=Directors-Job]] launched with the following parameters: [{JobParameter{name='run.id', value=1, type=class java.lang.Long, identifying=true}}]
+2026-01-13T09:36:55.674Z  INFO 87296 --- [Director List] [http-nio-9090-exec-1] o.s.batch.core.job.SimpleStepHandler     : Executing step: [Director-Step-Import]
+2026-01-13T09:36:55.679Z ERROR 87296 --- [Director List] [http-nio-9090-exec-1] o.s.b.core.step.item.ChunkOrientedStep   : Rolling back chunk transaction
+
+org.springframework.batch.infrastructure.item.file.FlatFileParseException: Parsing error at line: 2 in resource=[file [/Users/portolan/projects/personal/directors/data/directors.csv]], input=[Abbas Kiarostami,119294]
+	at org.springframework.batch.infrastructure.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:221) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.support.AbstractItemCountingItemStreamItemReader.read(AbstractItemCountingItemStreamItemReader.java:92) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.doRead(ChunkOrientedStep.java:559) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.readItem(ChunkOrientedStep.java:512) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.readChunk(ChunkOrientedStep.java:490) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processChunkSequentially(ChunkOrientedStep.java:443) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processNextChunk(ChunkOrientedStep.java:389) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.lambda$doExecute$0(ChunkOrientedStep.java:373) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.transaction.support.TransactionOperations.lambda$executeWithoutResult$0(TransactionOperations.java:68) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:137) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.support.TransactionOperations.executeWithoutResult(TransactionOperations.java:67) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.doExecute(ChunkOrientedStep.java:368) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:247) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:131) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:397) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:129) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:293) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher$1.run(TaskExecutorJobLauncher.java:220) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:61) ~[spring-core-7.0.2.jar:7.0.2]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.launchJobExecution(TaskExecutorJobLauncher.java:211) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.run(TaskExecutorJobLauncher.java:109) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.SimpleJobOperator.startNextInstance(SimpleJobOperator.java:294) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobOperator.startNextInstance(TaskExecutorJobOperator.java:133) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.SimpleJobOperator.start(SimpleJobOperator.java:199) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobOperator.start(TaskExecutorJobOperator.java:117) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:370) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222) ~[spring-aop-7.0.2.jar:7.0.2]
+	at jdk.proxy2/jdk.proxy2.$Proxy159.start(Unknown Source) ~[na:na]
+	at pt.pauloortolan.directors.controllers.BatchController.startDirectorsJob(BatchController.java:33) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.15.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.15.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: java.lang.IllegalStateException: Method not found: pt.pauloortolan.directors.pojo.DirectorImportPOJO.<init>()
+	at org.springframework.util.ReflectionUtils.handleReflectionException(ReflectionUtils.java:106) ~[spring-core-7.0.2.jar:7.0.2]
+	at org.springframework.batch.infrastructure.item.file.mapping.BeanWrapperFieldSetMapper.getBean(BeanWrapperFieldSetMapper.java:228) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.file.mapping.BeanWrapperFieldSetMapper.mapFieldSet(BeanWrapperFieldSetMapper.java:177) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.file.mapping.DefaultLineMapper.mapLine(DefaultLineMapper.java:44) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:217) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	... 85 common frames omitted
+
+2026-01-13T09:36:55.683Z ERROR 87296 --- [Director List] [http-nio-9090-exec-1] o.s.batch.core.step.AbstractStep         : Encountered an error executing step Director-Step-Import in job Directors-Job
+
+org.springframework.batch.core.step.FatalStepExecutionException: Unable to process chunk
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processChunkSequentially(ChunkOrientedStep.java:458) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processNextChunk(ChunkOrientedStep.java:389) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.lambda$doExecute$0(ChunkOrientedStep.java:373) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.transaction.support.TransactionOperations.lambda$executeWithoutResult$0(TransactionOperations.java:68) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:137) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.support.TransactionOperations.executeWithoutResult(TransactionOperations.java:67) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.doExecute(ChunkOrientedStep.java:368) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:247) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:131) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:397) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:129) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:293) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher$1.run(TaskExecutorJobLauncher.java:220) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:61) ~[spring-core-7.0.2.jar:7.0.2]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.launchJobExecution(TaskExecutorJobLauncher.java:211) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.run(TaskExecutorJobLauncher.java:109) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.SimpleJobOperator.startNextInstance(SimpleJobOperator.java:294) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobOperator.startNextInstance(TaskExecutorJobOperator.java:133) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.SimpleJobOperator.start(SimpleJobOperator.java:199) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobOperator.start(TaskExecutorJobOperator.java:117) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:370) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222) ~[spring-aop-7.0.2.jar:7.0.2]
+	at jdk.proxy2/jdk.proxy2.$Proxy159.start(Unknown Source) ~[na:na]
+	at pt.pauloortolan.directors.controllers.BatchController.startDirectorsJob(BatchController.java:33) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.15.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.15.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: org.springframework.batch.infrastructure.item.file.FlatFileParseException: Parsing error at line: 2 in resource=[file [/Users/portolan/projects/personal/directors/data/directors.csv]], input=[Abbas Kiarostami,119294]
+	at org.springframework.batch.infrastructure.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:221) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.support.AbstractItemCountingItemStreamItemReader.read(AbstractItemCountingItemStreamItemReader.java:92) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.doRead(ChunkOrientedStep.java:559) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.readItem(ChunkOrientedStep.java:512) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.readChunk(ChunkOrientedStep.java:490) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processChunkSequentially(ChunkOrientedStep.java:443) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	... 80 common frames omitted
+Caused by: java.lang.IllegalStateException: Method not found: pt.pauloortolan.directors.pojo.DirectorImportPOJO.<init>()
+	at org.springframework.util.ReflectionUtils.handleReflectionException(ReflectionUtils.java:106) ~[spring-core-7.0.2.jar:7.0.2]
+	at org.springframework.batch.infrastructure.item.file.mapping.BeanWrapperFieldSetMapper.getBean(BeanWrapperFieldSetMapper.java:228) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.file.mapping.BeanWrapperFieldSetMapper.mapFieldSet(BeanWrapperFieldSetMapper.java:177) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.file.mapping.DefaultLineMapper.mapLine(DefaultLineMapper.java:44) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:217) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	... 85 common frames omitted
+
+2026-01-13T09:36:55.684Z  INFO 87296 --- [Director List] [http-nio-9090-exec-1] o.s.batch.core.step.AbstractStep         : Step: [Director-Step-Import] executed in 9ms
+2026-01-13T09:36:55.685Z  INFO 87296 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobLauncher      : Job: [SimpleJob: [name=Directors-Job]] completed with the following parameters: [{JobParameter{name='run.id', value=1, type=class java.lang.Long, identifying=true}}] and the following status: [FAILED] in 11ms
+2026-01-13T09:37:28.367Z  INFO 87296 --- [Director List] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-13T09:37:28.369Z  INFO 87296 --- [Director List] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-01-13T09:37:28.372Z  INFO 87296 --- [Director List] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-13T09:37:28.374Z  INFO 87296 --- [Director List] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-13T09:37:28.375Z  INFO 87296 --- [Director List] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-13T09:39:19.490Z  INFO 88072 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Starting DirectorsApplication using Java 17.0.16 with PID 88072 (/Users/portolan/projects/personal/directors/build/classes/java/main started by portolan in /Users/portolan/projects/personal/directors)
+2026-01-13T09:39:19.491Z DEBUG 88072 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-01-13T09:39:19.492Z  INFO 88072 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-01-13T09:39:19.514Z  INFO 88072 --- [Director List] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-13T09:39:19.514Z  INFO 88072 --- [Director List] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-13T09:39:19.519Z  INFO 88072 --- [Director List] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file /Users/portolan/projects/personal/directors/compose.yaml
+2026-01-13T09:39:20.122Z  INFO 88072 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Starting
+2026-01-13T09:39:20.261Z  INFO 88072 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Started
+2026-01-13T09:39:20.262Z  INFO 88072 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Waiting
+2026-01-13T09:39:20.765Z  INFO 88072 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Healthy
+2026-01-13T09:39:23.498Z  INFO 88072 --- [Director List] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-13T09:39:23.517Z  INFO 88072 --- [Director List] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 1 JPA repository interface.
+2026-01-13T09:39:23.611Z  INFO 88072 --- [Director List] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d071242f-9feb-37a8-9b51-eab35915e1b2
+2026-01-13T09:39:23.872Z  INFO 88072 --- [Director List] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-01-13T09:39:23.877Z  INFO 88072 --- [Director List] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-13T09:39:23.878Z  INFO 88072 --- [Director List] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-13T09:39:23.899Z  INFO 88072 --- [Director List] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 762 ms
+2026-01-13T09:39:24.162Z  INFO 88072 --- [Director List] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:9091/directors_db?ApplicationName=Director+List (PostgreSQL 18.0)
+2026-01-13T09:39:24.191Z  INFO 88072 --- [Director List] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.012s)
+2026-01-13T09:39:24.217Z  INFO 88072 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "director_schema": 1
+2026-01-13T09:39:24.218Z  INFO 88072 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "director_schema" is up to date. No migration necessary.
+2026-01-13T09:39:24.246Z  INFO 88072 --- [Director List] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-13T09:39:24.263Z  INFO 88072 --- [Director List] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@e79d6fd
+2026-01-13T09:39:24.264Z  INFO 88072 --- [Director List] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-13T09:39:24.277Z  INFO 88072 --- [Director List] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-13T09:39:24.299Z  INFO 88072 --- [Director List] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-01-13T09:39:24.505Z  INFO 88072 --- [Director List] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-13T09:39:24.548Z  INFO 88072 --- [Director List] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:9091/directors_db?ApplicationName=Director+List]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: directors_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-13T09:39:24.899Z  INFO 88072 --- [Director List] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-13T09:39:24.901Z  INFO 88072 --- [Director List] [restartedMain] org.hibernate.orm.jdbc.batch             : HHH100501: Automatic JDBC statement batching enabled (maximum batch size 10)
+2026-01-13T09:39:24.903Z  INFO 88072 --- [Director List] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-13T09:40:08.773Z  INFO 88072 --- [Director List] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-13T09:40:08.881Z  WARN 88072 --- [Director List] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-13T09:40:09.085Z DEBUG 88072 --- [Director List] [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : File system access not preferred: using SpringTemplateLoader
+2026-01-13T09:40:09.138Z  INFO 88072 --- [Director List] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-01-13T09:40:09.177Z  INFO 88072 --- [Director List] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-01-13T09:40:09.185Z  INFO 88072 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Started DirectorsApplication in 49.897 seconds (process running for 50.302)
+2026-01-13T09:40:19.688Z  INFO 88072 --- [Director List] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-13T09:40:19.688Z  INFO 88072 --- [Director List] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-13T09:40:19.689Z  INFO 88072 --- [Director List] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-01-13T09:40:19.724Z  WARN 88072 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobOperator      : Attempting to launch job: [Directors-Job] which defines an incrementer with additional parameters: [{JobParameter{name='executionId', value=709ae9d0-2f35-47d3-80e0-0ae017b821ca, type=class java.lang.String, identifying=true},JobParameter{name='startedAt', value=1768297219706, type=class java.lang.Long, identifying=true}}]. Additional parameters will be ignored.
+2026-01-13T09:40:19.724Z  INFO 88072 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobOperator      : Launching next instance of job: [Directors-Job] with parameters: [{JobParameter{name='run.id', value=1, type=class java.lang.Long, identifying=true}}]
+2026-01-13T09:40:19.725Z  INFO 88072 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobLauncher      : Job: [SimpleJob: [name=Directors-Job]] launched with the following parameters: [{JobParameter{name='run.id', value=1, type=class java.lang.Long, identifying=true}}]
+2026-01-13T09:40:19.727Z  INFO 88072 --- [Director List] [http-nio-9090-exec-1] o.s.batch.core.job.SimpleStepHandler     : Executing step: [Director-Step-Import]
+2026-01-13T09:40:19.732Z ERROR 88072 --- [Director List] [http-nio-9090-exec-1] o.s.b.core.step.item.ChunkOrientedStep   : Rolling back chunk transaction
+
+org.springframework.batch.infrastructure.item.file.FlatFileParseException: Parsing error at line: 2 in resource=[file [/Users/portolan/projects/personal/directors/data/directors.csv]], input=[Abbas Kiarostami,119294]
+	at org.springframework.batch.infrastructure.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:221) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.support.AbstractItemCountingItemStreamItemReader.read(AbstractItemCountingItemStreamItemReader.java:92) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.doRead(ChunkOrientedStep.java:559) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.readItem(ChunkOrientedStep.java:512) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.readChunk(ChunkOrientedStep.java:490) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processChunkSequentially(ChunkOrientedStep.java:443) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processNextChunk(ChunkOrientedStep.java:389) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.lambda$doExecute$0(ChunkOrientedStep.java:373) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.transaction.support.TransactionOperations.lambda$executeWithoutResult$0(TransactionOperations.java:68) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:137) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.support.TransactionOperations.executeWithoutResult(TransactionOperations.java:67) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.doExecute(ChunkOrientedStep.java:368) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:247) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:131) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:397) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:129) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:293) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher$1.run(TaskExecutorJobLauncher.java:220) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:61) ~[spring-core-7.0.2.jar:7.0.2]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.launchJobExecution(TaskExecutorJobLauncher.java:211) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.run(TaskExecutorJobLauncher.java:109) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.SimpleJobOperator.startNextInstance(SimpleJobOperator.java:294) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobOperator.startNextInstance(TaskExecutorJobOperator.java:133) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.SimpleJobOperator.start(SimpleJobOperator.java:199) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobOperator.start(TaskExecutorJobOperator.java:117) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:370) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222) ~[spring-aop-7.0.2.jar:7.0.2]
+	at jdk.proxy2/jdk.proxy2.$Proxy159.start(Unknown Source) ~[na:na]
+	at pt.pauloortolan.directors.controllers.BatchController.startDirectorsJob(BatchController.java:33) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.15.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.15.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: java.lang.IllegalStateException: Method not found: pt.pauloortolan.directors.pojo.DirectorImportPOJO.<init>()
+	at org.springframework.util.ReflectionUtils.handleReflectionException(ReflectionUtils.java:106) ~[spring-core-7.0.2.jar:7.0.2]
+	at org.springframework.batch.infrastructure.item.file.mapping.BeanWrapperFieldSetMapper.getBean(BeanWrapperFieldSetMapper.java:228) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.file.mapping.BeanWrapperFieldSetMapper.mapFieldSet(BeanWrapperFieldSetMapper.java:177) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.file.mapping.DefaultLineMapper.mapLine(DefaultLineMapper.java:44) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:217) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	... 85 common frames omitted
+
+2026-01-13T09:40:19.736Z ERROR 88072 --- [Director List] [http-nio-9090-exec-1] o.s.batch.core.step.AbstractStep         : Encountered an error executing step Director-Step-Import in job Directors-Job
+
+org.springframework.batch.core.step.FatalStepExecutionException: Unable to process chunk
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processChunkSequentially(ChunkOrientedStep.java:458) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processNextChunk(ChunkOrientedStep.java:389) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.lambda$doExecute$0(ChunkOrientedStep.java:373) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.transaction.support.TransactionOperations.lambda$executeWithoutResult$0(TransactionOperations.java:68) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:137) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.support.TransactionOperations.executeWithoutResult(TransactionOperations.java:67) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.doExecute(ChunkOrientedStep.java:368) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:247) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:131) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:397) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:129) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:293) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher$1.run(TaskExecutorJobLauncher.java:220) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:61) ~[spring-core-7.0.2.jar:7.0.2]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.launchJobExecution(TaskExecutorJobLauncher.java:211) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.run(TaskExecutorJobLauncher.java:109) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.SimpleJobOperator.startNextInstance(SimpleJobOperator.java:294) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobOperator.startNextInstance(TaskExecutorJobOperator.java:133) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.SimpleJobOperator.start(SimpleJobOperator.java:199) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobOperator.start(TaskExecutorJobOperator.java:117) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:370) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222) ~[spring-aop-7.0.2.jar:7.0.2]
+	at jdk.proxy2/jdk.proxy2.$Proxy159.start(Unknown Source) ~[na:na]
+	at pt.pauloortolan.directors.controllers.BatchController.startDirectorsJob(BatchController.java:33) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.15.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.15.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: org.springframework.batch.infrastructure.item.file.FlatFileParseException: Parsing error at line: 2 in resource=[file [/Users/portolan/projects/personal/directors/data/directors.csv]], input=[Abbas Kiarostami,119294]
+	at org.springframework.batch.infrastructure.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:221) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.support.AbstractItemCountingItemStreamItemReader.read(AbstractItemCountingItemStreamItemReader.java:92) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.doRead(ChunkOrientedStep.java:559) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.readItem(ChunkOrientedStep.java:512) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.readChunk(ChunkOrientedStep.java:490) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processChunkSequentially(ChunkOrientedStep.java:443) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	... 80 common frames omitted
+Caused by: java.lang.IllegalStateException: Method not found: pt.pauloortolan.directors.pojo.DirectorImportPOJO.<init>()
+	at org.springframework.util.ReflectionUtils.handleReflectionException(ReflectionUtils.java:106) ~[spring-core-7.0.2.jar:7.0.2]
+	at org.springframework.batch.infrastructure.item.file.mapping.BeanWrapperFieldSetMapper.getBean(BeanWrapperFieldSetMapper.java:228) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.file.mapping.BeanWrapperFieldSetMapper.mapFieldSet(BeanWrapperFieldSetMapper.java:177) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.file.mapping.DefaultLineMapper.mapLine(DefaultLineMapper.java:44) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:217) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	... 85 common frames omitted
+
+2026-01-13T09:40:19.737Z  INFO 88072 --- [Director List] [http-nio-9090-exec-1] o.s.batch.core.step.AbstractStep         : Step: [Director-Step-Import] executed in 8ms
+2026-01-13T09:40:19.738Z  INFO 88072 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobLauncher      : Job: [SimpleJob: [name=Directors-Job]] completed with the following parameters: [{JobParameter{name='run.id', value=1, type=class java.lang.Long, identifying=true}}] and the following status: [FAILED] in 10ms
+2026-01-13T09:40:42.297Z  INFO 88072 --- [Director List] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-13T09:40:42.300Z  INFO 88072 --- [Director List] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-01-13T09:40:42.305Z  INFO 88072 --- [Director List] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-13T09:40:42.308Z  INFO 88072 --- [Director List] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-13T09:40:42.310Z  INFO 88072 --- [Director List] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-13T09:41:37.176Z  INFO 88649 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Starting DirectorsApplication using Java 17.0.16 with PID 88649 (/Users/portolan/projects/personal/directors/build/classes/java/main started by portolan in /Users/portolan/projects/personal/directors)
+2026-01-13T09:41:37.177Z DEBUG 88649 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-01-13T09:41:37.178Z  INFO 88649 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-01-13T09:41:37.201Z  INFO 88649 --- [Director List] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-13T09:41:37.202Z  INFO 88649 --- [Director List] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-13T09:41:37.207Z  INFO 88649 --- [Director List] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file /Users/portolan/projects/personal/directors/compose.yaml
+2026-01-13T09:41:37.810Z  INFO 88649 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Starting
+2026-01-13T09:41:37.945Z  INFO 88649 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Started
+2026-01-13T09:41:37.945Z  INFO 88649 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Waiting
+2026-01-13T09:41:38.449Z  INFO 88649 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Healthy
+2026-01-13T09:41:42.331Z  INFO 88649 --- [Director List] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-13T09:41:42.354Z  INFO 88649 --- [Director List] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 1 JPA repository interface.
+2026-01-13T09:41:42.457Z  INFO 88649 --- [Director List] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d071242f-9feb-37a8-9b51-eab35915e1b2
+2026-01-13T09:41:42.747Z  INFO 88649 --- [Director List] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-01-13T09:41:42.753Z  INFO 88649 --- [Director List] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-13T09:41:42.753Z  INFO 88649 --- [Director List] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-13T09:41:42.774Z  INFO 88649 --- [Director List] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 949 ms
+2026-01-13T09:41:43.059Z  INFO 88649 --- [Director List] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:9091/directors_db?ApplicationName=Director+List (PostgreSQL 18.0)
+2026-01-13T09:41:43.092Z  INFO 88649 --- [Director List] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.013s)
+2026-01-13T09:41:43.120Z  INFO 88649 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "director_schema": 1
+2026-01-13T09:41:43.122Z  INFO 88649 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "director_schema" is up to date. No migration necessary.
+2026-01-13T09:41:43.147Z  INFO 88649 --- [Director List] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-13T09:41:43.174Z  INFO 88649 --- [Director List] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5d1927d9
+2026-01-13T09:41:43.175Z  INFO 88649 --- [Director List] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-13T09:41:43.188Z  INFO 88649 --- [Director List] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-13T09:41:43.211Z  INFO 88649 --- [Director List] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-01-13T09:41:43.423Z  INFO 88649 --- [Director List] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-13T09:41:43.472Z  INFO 88649 --- [Director List] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:9091/directors_db?ApplicationName=Director+List]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: directors_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-13T09:41:43.836Z  INFO 88649 --- [Director List] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-13T09:41:43.838Z  INFO 88649 --- [Director List] [restartedMain] org.hibernate.orm.jdbc.batch             : HHH100501: Automatic JDBC statement batching enabled (maximum batch size 10)
+2026-01-13T09:41:43.840Z  INFO 88649 --- [Director List] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-13T09:41:49.884Z  INFO 88649 --- [Director List] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-13T09:41:49.992Z  WARN 88649 --- [Director List] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-13T09:41:50.286Z DEBUG 88649 --- [Director List] [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : File system access not preferred: using SpringTemplateLoader
+2026-01-13T09:41:50.333Z  INFO 88649 --- [Director List] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-01-13T09:41:50.366Z  INFO 88649 --- [Director List] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-01-13T09:41:50.374Z  INFO 88649 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Started DirectorsApplication in 13.399 seconds (process running for 13.724)
+2026-01-13T09:41:55.964Z  INFO 88649 --- [Director List] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-13T09:41:55.964Z  INFO 88649 --- [Director List] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-13T09:41:55.966Z  INFO 88649 --- [Director List] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-01-13T09:41:56.003Z  WARN 88649 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobOperator      : Attempting to launch job: [Directors-Job] which defines an incrementer with additional parameters: [{JobParameter{name='executionId', value=67ffd7c8-ad28-4444-9d84-d91ca9d2d2cd, type=class java.lang.String, identifying=true},JobParameter{name='startedAt', value=1768297315983, type=class java.lang.Long, identifying=true}}]. Additional parameters will be ignored.
+2026-01-13T09:41:56.003Z  INFO 88649 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobOperator      : Launching next instance of job: [Directors-Job] with parameters: [{JobParameter{name='run.id', value=1, type=class java.lang.Long, identifying=true}}]
+2026-01-13T09:41:56.004Z  INFO 88649 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobLauncher      : Job: [SimpleJob: [name=Directors-Job]] launched with the following parameters: [{JobParameter{name='run.id', value=1, type=class java.lang.Long, identifying=true}}]
+2026-01-13T09:41:56.007Z  INFO 88649 --- [Director List] [http-nio-9090-exec-1] o.s.batch.core.job.SimpleStepHandler     : Executing step: [Director-Step-Import]
+2026-01-13T09:41:56.016Z ERROR 88649 --- [Director List] [http-nio-9090-exec-1] o.s.b.core.step.item.ChunkOrientedStep   : Rolling back chunk transaction
+
+org.springframework.batch.infrastructure.item.file.FlatFileParseException: Parsing error at line: 2 in resource=[file [/Users/portolan/projects/personal/directors/data/directors.csv]], input=[Abbas Kiarostami,119294]
+	at org.springframework.batch.infrastructure.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:221) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.support.AbstractItemCountingItemStreamItemReader.read(AbstractItemCountingItemStreamItemReader.java:92) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.doRead(ChunkOrientedStep.java:559) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.readItem(ChunkOrientedStep.java:512) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.readChunk(ChunkOrientedStep.java:490) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processChunkSequentially(ChunkOrientedStep.java:443) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processNextChunk(ChunkOrientedStep.java:389) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.lambda$doExecute$0(ChunkOrientedStep.java:373) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.transaction.support.TransactionOperations.lambda$executeWithoutResult$0(TransactionOperations.java:68) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:137) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.support.TransactionOperations.executeWithoutResult(TransactionOperations.java:67) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.doExecute(ChunkOrientedStep.java:368) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:247) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:131) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:397) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:129) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:293) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher$1.run(TaskExecutorJobLauncher.java:220) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:61) ~[spring-core-7.0.2.jar:7.0.2]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.launchJobExecution(TaskExecutorJobLauncher.java:211) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.run(TaskExecutorJobLauncher.java:109) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.SimpleJobOperator.startNextInstance(SimpleJobOperator.java:294) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobOperator.startNextInstance(TaskExecutorJobOperator.java:133) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.SimpleJobOperator.start(SimpleJobOperator.java:199) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobOperator.start(TaskExecutorJobOperator.java:117) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:370) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222) ~[spring-aop-7.0.2.jar:7.0.2]
+	at jdk.proxy2/jdk.proxy2.$Proxy159.start(Unknown Source) ~[na:na]
+	at pt.pauloortolan.directors.controllers.BatchController.startDirectorsJob(BatchController.java:33) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.15.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.15.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: org.springframework.beans.NotWritablePropertyException: Invalid property 'director' of bean class [pt.pauloortolan.directors.pojo.DirectorImportPOJO]: Bean property 'director' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.BeanWrapperImpl.createNotWritablePropertyException(BeanWrapperImpl.java:206) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.AbstractNestablePropertyAccessor.processLocalProperty(AbstractNestablePropertyAccessor.java:426) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.AbstractNestablePropertyAccessor.setPropertyValue(AbstractNestablePropertyAccessor.java:275) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.AbstractNestablePropertyAccessor.setPropertyValue(AbstractNestablePropertyAccessor.java:263) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:104) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.validation.DataBinder.applyPropertyValues(DataBinder.java:1355) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.validation.DataBinder.doBind(DataBinder.java:1241) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.validation.DataBinder.bind(DataBinder.java:1216) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.batch.infrastructure.item.file.mapping.BeanWrapperFieldSetMapper.mapFieldSet(BeanWrapperFieldSetMapper.java:179) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.file.mapping.DefaultLineMapper.mapLine(DefaultLineMapper.java:44) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:217) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	... 85 common frames omitted
+
+2026-01-13T09:41:56.022Z ERROR 88649 --- [Director List] [http-nio-9090-exec-1] o.s.batch.core.step.AbstractStep         : Encountered an error executing step Director-Step-Import in job Directors-Job
+
+org.springframework.batch.core.step.FatalStepExecutionException: Unable to process chunk
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processChunkSequentially(ChunkOrientedStep.java:458) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processNextChunk(ChunkOrientedStep.java:389) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.lambda$doExecute$0(ChunkOrientedStep.java:373) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.transaction.support.TransactionOperations.lambda$executeWithoutResult$0(TransactionOperations.java:68) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:137) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.support.TransactionOperations.executeWithoutResult(TransactionOperations.java:67) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.doExecute(ChunkOrientedStep.java:368) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:247) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:131) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:397) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:129) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:293) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher$1.run(TaskExecutorJobLauncher.java:220) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:61) ~[spring-core-7.0.2.jar:7.0.2]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.launchJobExecution(TaskExecutorJobLauncher.java:211) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.run(TaskExecutorJobLauncher.java:109) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.SimpleJobOperator.startNextInstance(SimpleJobOperator.java:294) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobOperator.startNextInstance(TaskExecutorJobOperator.java:133) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.SimpleJobOperator.start(SimpleJobOperator.java:199) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobOperator.start(TaskExecutorJobOperator.java:117) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:370) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222) ~[spring-aop-7.0.2.jar:7.0.2]
+	at jdk.proxy2/jdk.proxy2.$Proxy159.start(Unknown Source) ~[na:na]
+	at pt.pauloortolan.directors.controllers.BatchController.startDirectorsJob(BatchController.java:33) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.15.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.15.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: org.springframework.batch.infrastructure.item.file.FlatFileParseException: Parsing error at line: 2 in resource=[file [/Users/portolan/projects/personal/directors/data/directors.csv]], input=[Abbas Kiarostami,119294]
+	at org.springframework.batch.infrastructure.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:221) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.support.AbstractItemCountingItemStreamItemReader.read(AbstractItemCountingItemStreamItemReader.java:92) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.doRead(ChunkOrientedStep.java:559) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.readItem(ChunkOrientedStep.java:512) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.readChunk(ChunkOrientedStep.java:490) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processChunkSequentially(ChunkOrientedStep.java:443) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	... 80 common frames omitted
+Caused by: org.springframework.beans.NotWritablePropertyException: Invalid property 'director' of bean class [pt.pauloortolan.directors.pojo.DirectorImportPOJO]: Bean property 'director' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.BeanWrapperImpl.createNotWritablePropertyException(BeanWrapperImpl.java:206) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.AbstractNestablePropertyAccessor.processLocalProperty(AbstractNestablePropertyAccessor.java:426) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.AbstractNestablePropertyAccessor.setPropertyValue(AbstractNestablePropertyAccessor.java:275) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.AbstractNestablePropertyAccessor.setPropertyValue(AbstractNestablePropertyAccessor.java:263) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:104) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.validation.DataBinder.applyPropertyValues(DataBinder.java:1355) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.validation.DataBinder.doBind(DataBinder.java:1241) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.validation.DataBinder.bind(DataBinder.java:1216) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.batch.infrastructure.item.file.mapping.BeanWrapperFieldSetMapper.mapFieldSet(BeanWrapperFieldSetMapper.java:179) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.file.mapping.DefaultLineMapper.mapLine(DefaultLineMapper.java:44) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	at org.springframework.batch.infrastructure.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:217) ~[spring-batch-infrastructure-6.0.1.jar:6.0.1]
+	... 85 common frames omitted
+
+2026-01-13T09:41:56.023Z  INFO 88649 --- [Director List] [http-nio-9090-exec-1] o.s.batch.core.step.AbstractStep         : Step: [Director-Step-Import] executed in 14ms
+2026-01-13T09:41:56.024Z  INFO 88649 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobLauncher      : Job: [SimpleJob: [name=Directors-Job]] completed with the following parameters: [{JobParameter{name='run.id', value=1, type=class java.lang.Long, identifying=true}}] and the following status: [FAILED] in 16ms
+2026-01-13T09:42:32.116Z  INFO 88649 --- [Director List] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-13T09:42:32.153Z  INFO 88649 --- [Director List] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-01-13T09:42:32.157Z  INFO 88649 --- [Director List] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-13T09:42:32.159Z  INFO 88649 --- [Director List] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-13T09:42:32.160Z  INFO 88649 --- [Director List] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-13T09:44:15.027Z  INFO 89392 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Starting DirectorsApplication using Java 17.0.16 with PID 89392 (/Users/portolan/projects/personal/directors/build/classes/java/main started by portolan in /Users/portolan/projects/personal/directors)
+2026-01-13T09:44:15.028Z DEBUG 89392 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-01-13T09:44:15.029Z  INFO 89392 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-01-13T09:44:15.055Z  INFO 89392 --- [Director List] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-13T09:44:15.055Z  INFO 89392 --- [Director List] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-13T09:44:15.066Z  INFO 89392 --- [Director List] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file /Users/portolan/projects/personal/directors/compose.yaml
+2026-01-13T09:44:15.674Z  INFO 89392 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Starting
+2026-01-13T09:44:15.815Z  INFO 89392 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Started
+2026-01-13T09:44:15.815Z  INFO 89392 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Waiting
+2026-01-13T09:44:16.320Z  INFO 89392 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Healthy
+2026-01-13T09:44:18.076Z  INFO 89392 --- [Director List] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-13T09:44:18.097Z  INFO 89392 --- [Director List] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 1 JPA repository interface.
+2026-01-13T09:44:18.202Z  INFO 89392 --- [Director List] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d071242f-9feb-37a8-9b51-eab35915e1b2
+2026-01-13T09:44:18.466Z  INFO 89392 --- [Director List] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-01-13T09:44:18.472Z  INFO 89392 --- [Director List] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-13T09:44:18.472Z  INFO 89392 --- [Director List] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-13T09:44:18.492Z  INFO 89392 --- [Director List] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 768 ms
+2026-01-13T09:44:18.779Z  INFO 89392 --- [Director List] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:9091/directors_db?ApplicationName=Director+List (PostgreSQL 18.0)
+2026-01-13T09:44:18.804Z  INFO 89392 --- [Director List] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.011s)
+2026-01-13T09:44:18.821Z  INFO 89392 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "director_schema": 1
+2026-01-13T09:44:18.822Z  INFO 89392 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "director_schema" is up to date. No migration necessary.
+2026-01-13T09:44:18.845Z  INFO 89392 --- [Director List] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-13T09:44:18.860Z  INFO 89392 --- [Director List] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3cb2dd43
+2026-01-13T09:44:18.860Z  INFO 89392 --- [Director List] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-13T09:44:18.874Z  INFO 89392 --- [Director List] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-13T09:44:18.897Z  INFO 89392 --- [Director List] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-01-13T09:44:19.114Z  INFO 89392 --- [Director List] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-13T09:44:19.170Z  INFO 89392 --- [Director List] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:9091/directors_db?ApplicationName=Director+List]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: directors_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-13T09:44:19.526Z  INFO 89392 --- [Director List] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-13T09:44:19.528Z  INFO 89392 --- [Director List] [restartedMain] org.hibernate.orm.jdbc.batch             : HHH100501: Automatic JDBC statement batching enabled (maximum batch size 10)
+2026-01-13T09:44:19.530Z  INFO 89392 --- [Director List] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-13T09:44:19.595Z  INFO 89392 --- [Director List] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-13T09:44:19.704Z  WARN 89392 --- [Director List] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-13T09:44:19.906Z DEBUG 89392 --- [Director List] [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : File system access not preferred: using SpringTemplateLoader
+2026-01-13T09:44:19.949Z  INFO 89392 --- [Director List] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-01-13T09:44:19.982Z  INFO 89392 --- [Director List] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-01-13T09:44:19.989Z  INFO 89392 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Started DirectorsApplication in 5.167 seconds (process running for 5.502)
+2026-01-13T09:44:33.901Z  INFO 89392 --- [Director List] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-13T09:44:33.902Z  INFO 89392 --- [Director List] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-13T09:44:33.904Z  INFO 89392 --- [Director List] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-01-13T09:44:33.941Z  WARN 89392 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobOperator      : Attempting to launch job: [Directors-Job] which defines an incrementer with additional parameters: [{JobParameter{name='executionId', value=20306e02-38d6-43fa-94b3-888dbf13205c, type=class java.lang.String, identifying=true},JobParameter{name='startedAt', value=1768297473922, type=class java.lang.Long, identifying=true}}]. Additional parameters will be ignored.
+2026-01-13T09:44:33.942Z  INFO 89392 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobOperator      : Launching next instance of job: [Directors-Job] with parameters: [{JobParameter{name='run.id', value=1, type=class java.lang.Long, identifying=true}}]
+2026-01-13T09:44:33.943Z  INFO 89392 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobLauncher      : Job: [SimpleJob: [name=Directors-Job]] launched with the following parameters: [{JobParameter{name='run.id', value=1, type=class java.lang.Long, identifying=true}}]
+2026-01-13T09:44:33.946Z  INFO 89392 --- [Director List] [http-nio-9090-exec-1] o.s.batch.core.job.SimpleStepHandler     : Executing step: [Director-Step-Import]
+2026-01-13T09:45:27.584Z  INFO 89392 --- [Director List] [http-nio-9090-exec-1] o.s.batch.core.step.AbstractStep         : Step: [Director-Step-Import] executed in 53s635ms
+2026-01-13T09:45:27.585Z  INFO 89392 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobLauncher      : Job: [SimpleJob: [name=Directors-Job]] completed with the following parameters: [{JobParameter{name='run.id', value=1, type=class java.lang.Long, identifying=true}}] and the following status: [COMPLETED] in 53s639ms
+2026-01-13T09:46:27.259Z  WARN 89392 --- [Director List] [http-nio-9090-exec-2] o.s.b.c.l.s.TaskExecutorJobOperator      : Attempting to launch job: [Directors-Job] which defines an incrementer with additional parameters: [{JobParameter{name='executionId', value=f786a302-c685-447b-a0d9-9d834bfb27d1, type=class java.lang.String, identifying=true},JobParameter{name='startedAt', value=1768297587257, type=class java.lang.Long, identifying=true}}]. Additional parameters will be ignored.
+2026-01-13T09:46:27.261Z  INFO 89392 --- [Director List] [http-nio-9090-exec-2] o.s.b.c.l.s.TaskExecutorJobOperator      : Launching next instance of job: [Directors-Job] with parameters: [{JobParameter{name='run.id', value=2, type=class java.lang.Long, identifying=true}}]
+2026-01-13T09:46:27.268Z  INFO 89392 --- [Director List] [http-nio-9090-exec-2] o.s.b.c.l.s.TaskExecutorJobLauncher      : Job: [SimpleJob: [name=Directors-Job]] launched with the following parameters: [{JobParameter{name='run.id', value=2, type=class java.lang.Long, identifying=true}}]
+2026-01-13T09:46:27.269Z  INFO 89392 --- [Director List] [http-nio-9090-exec-2] o.s.batch.core.job.SimpleStepHandler     : Executing step: [Director-Step-Import]
+2026-01-13T09:46:36.686Z  INFO 89392 --- [Director List] [http-nio-9090-exec-2] o.s.batch.core.step.AbstractStep         : Step: [Director-Step-Import] executed in 9s417ms
+2026-01-13T09:46:36.687Z  INFO 89392 --- [Director List] [http-nio-9090-exec-2] o.s.b.c.l.s.TaskExecutorJobLauncher      : Job: [SimpleJob: [name=Directors-Job]] completed with the following parameters: [{JobParameter{name='run.id', value=2, type=class java.lang.Long, identifying=true}}] and the following status: [COMPLETED] in 9s418ms
+2026-01-13T09:49:22.328Z  INFO 89392 --- [Director List] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-13T09:49:22.331Z  INFO 89392 --- [Director List] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-01-13T09:49:22.337Z  INFO 89392 --- [Director List] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-13T09:49:22.346Z  INFO 89392 --- [Director List] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-13T09:49:22.348Z  INFO 89392 --- [Director List] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

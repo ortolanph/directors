@@ -1,0 +1,25 @@
+services:
+  guestbookdb:
+    image: postgres
+    container_name: directorsdb
+    restart: always
+    env_file:
+      - .env
+    environment:
+      POSTGRES_DB: ${DATABASE_NAME}
+      POSTGRES_USER: ${DATABASE_USER}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+    ports:
+      - "${DATABASE_PORT}:5432"
+    volumes:
+#      - directorsdata:/var/lib/postgresql/data
+      - ./initdb:/docker-entrypoint-initdb.d
+    networks:
+      - guestbooknetwork
+
+#volumes:
+#  directorsdata:
+
+networks:
+  guestbooknetwork:
+    driver: bridge

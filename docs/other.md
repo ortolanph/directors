@@ -1,0 +1,1 @@
+https://medium.com/@ukange.ushahemba/generate-pdf-file-using-html-template-in-spring-boot-fd54667c08c4
