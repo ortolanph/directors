@@ -1591,3 +1591,1288 @@ Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "direc
 2026-01-16T16:27:55.102Z  INFO 6894 --- [Director List] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-01-16T16:27:55.105Z  INFO 6894 --- [Director List] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2026-01-16T16:27:55.106Z  INFO 6894 --- [Director List] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-16T16:31:10.066Z  INFO 8132 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Starting DirectorsApplication using Java 17.0.16 with PID 8132 (/Users/portolan/projects/personal/directors/build/classes/java/main started by portolan in /Users/portolan/projects/personal/directors)
+2026-01-16T16:31:10.067Z DEBUG 8132 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-01-16T16:31:10.068Z  INFO 8132 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-01-16T16:31:10.092Z  INFO 8132 --- [Director List] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-16T16:31:10.092Z  INFO 8132 --- [Director List] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-16T16:31:10.097Z  INFO 8132 --- [Director List] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file /Users/portolan/projects/personal/directors/compose.yaml
+2026-01-16T16:31:10.652Z  INFO 8132 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network directors_guestbooknetwork  Creating
+2026-01-16T16:31:10.692Z  INFO 8132 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network directors_guestbooknetwork  Created
+2026-01-16T16:31:10.693Z  INFO 8132 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Creating
+2026-01-16T16:31:10.734Z  INFO 8132 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Created
+2026-01-16T16:31:10.745Z  INFO 8132 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Starting
+2026-01-16T16:31:10.936Z  INFO 8132 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Started
+2026-01-16T16:31:10.937Z  INFO 8132 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Waiting
+2026-01-16T16:31:11.440Z  INFO 8132 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Healthy
+2026-01-16T16:31:13.353Z  INFO 8132 --- [Director List] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-16T16:31:13.375Z  INFO 8132 --- [Director List] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
+2026-01-16T16:31:13.474Z  INFO 8132 --- [Director List] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=454c124e-ab2d-3b8f-bcc1-549dd05fd580
+2026-01-16T16:31:13.737Z  INFO 8132 --- [Director List] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-01-16T16:31:13.743Z  INFO 8132 --- [Director List] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-16T16:31:13.743Z  INFO 8132 --- [Director List] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-16T16:31:13.763Z  INFO 8132 --- [Director List] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 790 ms
+2026-01-16T16:31:14.024Z  INFO 8132 --- [Director List] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:9091/directors_db?ApplicationName=Director+List (PostgreSQL 18.0)
+2026-01-16T16:31:14.051Z  INFO 8132 --- [Director List] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "director_schema"."flyway_schema_history" does not exist yet
+2026-01-16T16:31:14.054Z  INFO 8132 --- [Director List] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.008s)
+2026-01-16T16:31:14.069Z  INFO 8132 --- [Director List] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "director_schema"."flyway_schema_history" ...
+2026-01-16T16:31:14.119Z  INFO 8132 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "director_schema": << Empty Schema >>
+2026-01-16T16:31:14.124Z  INFO 8132 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "director_schema" to version "1 - directors table"
+2026-01-16T16:31:14.155Z  INFO 8132 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "director_schema" to version "2 - movies table"
+2026-01-16T16:31:14.170Z ERROR 8132 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Migration of schema "director_schema" to version "2 - movies table" failed! Changes successfully rolled back.
+2026-01-16T16:31:14.177Z  WARN 8132 --- [Director List] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Failed to execute script V2__movies_table.sql
+---------------------------------------------
+SQL State  : 42703
+Error Code : 0
+Message    : ERROR: column "director_id" named in key does not exist
+  Position: 78
+Location   : db/migration/V2__movies_table.sql (/Users/portolan/projects/personal/directors/build/resources/main/db/migration/V2__movies_table.sql)
+Line       : 19
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+2026-01-16T16:31:14.179Z  INFO 8132 --- [Director List] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-01-16T16:31:14.185Z  INFO 8132 --- [Director List] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-16T16:31:14.191Z ERROR 8132 --- [Director List] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Failed to execute script V2__movies_table.sql
+---------------------------------------------
+SQL State  : 42703
+Error Code : 0
+Message    : ERROR: column "director_id" named in key does not exist
+  Position: 78
+Location   : db/migration/V2__movies_table.sql (/Users/portolan/projects/personal/directors/build/resources/main/db/migration/V2__movies_table.sql)
+Line       : 19
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:976) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:620) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.1.jar:4.0.1]
+	at pt.pauloortolan.directors.DirectorsApplication.main(DirectorsApplication.java:16) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.1.jar:4.0.1]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Failed to execute script V2__movies_table.sql
+---------------------------------------------
+SQL State  : 42703
+Error Code : 0
+Message    : ERROR: column "director_id" named in key does not exist
+  Position: 78
+Location   : db/migration/V2__movies_table.sql (/Users/portolan/projects/personal/directors/build/resources/main/db/migration/V2__movies_table.sql)
+Line       : 19
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:309) ~[spring-beans-7.0.2.jar:7.0.2]
+	... 15 common frames omitted
+Caused by: org.flywaydb.core.internal.exception.FlywayMigrateException: Failed to execute script V2__movies_table.sql
+---------------------------------------------
+SQL State  : 42703
+Error Code : 0
+Message    : ERROR: column "director_id" named in key does not exist
+  Position: 78
+Location   : db/migration/V2__movies_table.sql (/Users/portolan/projects/personal/directors/build/resources/main/db/migration/V2__movies_table.sql)
+Line       : 19
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:399) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$applyMigrations$1(DbMigrate.java:283) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:59) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.applyMigrations(DbMigrate.java:282) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:255) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$migrateAll$0(DbMigrate.java:153) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.database.postgresql.PostgreSQLAdvisoryLockTemplate.execute(PostgreSQLAdvisoryLockTemplate.java:77) ~[flyway-database-postgresql-11.14.1.jar:na]
+	at org.flywaydb.database.postgresql.PostgreSQLAdvisoryLockTemplate.lambda$execute$0(PostgreSQLAdvisoryLockTemplate.java:60) ~[flyway-database-postgresql-11.14.1.jar:na]
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:59) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.database.postgresql.PostgreSQLAdvisoryLockTemplate.execute(PostgreSQLAdvisoryLockTemplate.java:60) ~[flyway-database-postgresql-11.14.1.jar:na]
+	at org.flywaydb.database.postgresql.PostgreSQLConnection.lock(PostgreSQLConnection.java:105) ~[flyway-database-postgresql-11.14.1.jar:na]
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:164) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:153) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:104) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.Flyway.lambda$migrate$3(Flyway.java:245) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:240) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:186) ~[flyway-core-11.14.1.jar:na]
+	at org.springframework.boot.flyway.autoconfigure.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:67) ~[spring-boot-flyway-4.0.1.jar:4.0.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.2.jar:7.0.2]
+	... 22 common frames omitted
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: Failed to execute script V2__movies_table.sql
+---------------------------------------------
+SQL State  : 42703
+Error Code : 0
+Message    : ERROR: column "director_id" named in key does not exist
+  Position: 78
+Location   : db/migration/V2__movies_table.sql (/Users/portolan/projects/personal/directors/build/resources/main/db/migration/V2__movies_table.sql)
+Line       : 19
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:255) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:216) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:136) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.executeOnce(SqlMigrationExecutor.java:75) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.lambda$execute$0(SqlMigrationExecutor.java:66) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.database.DefaultExecutionStrategy.execute(DefaultExecutionStrategy.java:31) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:65) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:391) ~[flyway-core-11.14.1.jar:na]
+	... 41 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: column "director_id" named in key does not exist
+  Position: 78
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2421) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:525) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:357) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:342) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:318) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:313) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.executeStatement(JdbcTemplate.java:215) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.sqlscript.ParsedSqlStatement.execute(ParsedSqlStatement.java:88) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:211) ~[flyway-core-11.14.1.jar:na]
+	... 47 common frames omitted
+
+2026-01-16T16:31:44.652Z  INFO 8313 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Starting DirectorsApplication using Java 17.0.16 with PID 8313 (/Users/portolan/projects/personal/directors/build/classes/java/main started by portolan in /Users/portolan/projects/personal/directors)
+2026-01-16T16:31:44.653Z DEBUG 8313 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-01-16T16:31:44.653Z  INFO 8313 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-01-16T16:31:44.677Z  INFO 8313 --- [Director List] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-16T16:31:44.677Z  INFO 8313 --- [Director List] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-16T16:31:44.683Z  INFO 8313 --- [Director List] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file /Users/portolan/projects/personal/directors/compose.yaml
+2026-01-16T16:31:45.233Z  INFO 8313 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network directors_guestbooknetwork  Creating
+2026-01-16T16:31:45.278Z  INFO 8313 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network directors_guestbooknetwork  Created
+2026-01-16T16:31:45.279Z  INFO 8313 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Creating
+2026-01-16T16:31:45.326Z  INFO 8313 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Created
+2026-01-16T16:31:45.336Z  INFO 8313 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Starting
+2026-01-16T16:31:45.431Z  INFO 8313 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Started
+2026-01-16T16:31:45.432Z  INFO 8313 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Waiting
+2026-01-16T16:31:45.935Z  INFO 8313 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Healthy
+2026-01-16T16:31:47.874Z  INFO 8313 --- [Director List] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-16T16:31:47.895Z  INFO 8313 --- [Director List] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
+2026-01-16T16:31:47.992Z  INFO 8313 --- [Director List] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=454c124e-ab2d-3b8f-bcc1-549dd05fd580
+2026-01-16T16:31:48.248Z  INFO 8313 --- [Director List] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-01-16T16:31:48.253Z  INFO 8313 --- [Director List] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-16T16:31:48.253Z  INFO 8313 --- [Director List] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-16T16:31:48.273Z  INFO 8313 --- [Director List] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 761 ms
+2026-01-16T16:31:48.537Z  INFO 8313 --- [Director List] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:9091/directors_db?ApplicationName=Director+List (PostgreSQL 18.0)
+2026-01-16T16:31:48.566Z  INFO 8313 --- [Director List] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "director_schema"."flyway_schema_history" does not exist yet
+2026-01-16T16:31:48.569Z  INFO 8313 --- [Director List] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.010s)
+2026-01-16T16:31:48.588Z  INFO 8313 --- [Director List] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "director_schema"."flyway_schema_history" ...
+2026-01-16T16:31:48.635Z  INFO 8313 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "director_schema": << Empty Schema >>
+2026-01-16T16:31:48.639Z  INFO 8313 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "director_schema" to version "1 - directors table"
+2026-01-16T16:31:48.668Z  INFO 8313 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "director_schema" to version "2 - movies table"
+2026-01-16T16:31:48.682Z ERROR 8313 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Migration of schema "director_schema" to version "2 - movies table" failed! Changes successfully rolled back.
+2026-01-16T16:31:48.689Z  WARN 8313 --- [Director List] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Failed to execute script V2__movies_table.sql
+---------------------------------------------
+SQL State  : 42703
+Error Code : 0
+Message    : ERROR: column "director_id" named in key does not exist
+  Position: 78
+Location   : db/migration/V2__movies_table.sql (/Users/portolan/projects/personal/directors/build/resources/main/db/migration/V2__movies_table.sql)
+Line       : 19
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+2026-01-16T16:31:48.691Z  INFO 8313 --- [Director List] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-01-16T16:31:48.698Z  INFO 8313 --- [Director List] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-16T16:31:48.704Z ERROR 8313 --- [Director List] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Failed to execute script V2__movies_table.sql
+---------------------------------------------
+SQL State  : 42703
+Error Code : 0
+Message    : ERROR: column "director_id" named in key does not exist
+  Position: 78
+Location   : db/migration/V2__movies_table.sql (/Users/portolan/projects/personal/directors/build/resources/main/db/migration/V2__movies_table.sql)
+Line       : 19
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:976) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:620) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.1.jar:4.0.1]
+	at pt.pauloortolan.directors.DirectorsApplication.main(DirectorsApplication.java:16) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.1.jar:4.0.1]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Failed to execute script V2__movies_table.sql
+---------------------------------------------
+SQL State  : 42703
+Error Code : 0
+Message    : ERROR: column "director_id" named in key does not exist
+  Position: 78
+Location   : db/migration/V2__movies_table.sql (/Users/portolan/projects/personal/directors/build/resources/main/db/migration/V2__movies_table.sql)
+Line       : 19
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:309) ~[spring-beans-7.0.2.jar:7.0.2]
+	... 15 common frames omitted
+Caused by: org.flywaydb.core.internal.exception.FlywayMigrateException: Failed to execute script V2__movies_table.sql
+---------------------------------------------
+SQL State  : 42703
+Error Code : 0
+Message    : ERROR: column "director_id" named in key does not exist
+  Position: 78
+Location   : db/migration/V2__movies_table.sql (/Users/portolan/projects/personal/directors/build/resources/main/db/migration/V2__movies_table.sql)
+Line       : 19
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:399) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$applyMigrations$1(DbMigrate.java:283) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:59) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.applyMigrations(DbMigrate.java:282) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:255) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$migrateAll$0(DbMigrate.java:153) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.database.postgresql.PostgreSQLAdvisoryLockTemplate.execute(PostgreSQLAdvisoryLockTemplate.java:77) ~[flyway-database-postgresql-11.14.1.jar:na]
+	at org.flywaydb.database.postgresql.PostgreSQLAdvisoryLockTemplate.lambda$execute$0(PostgreSQLAdvisoryLockTemplate.java:60) ~[flyway-database-postgresql-11.14.1.jar:na]
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:59) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.database.postgresql.PostgreSQLAdvisoryLockTemplate.execute(PostgreSQLAdvisoryLockTemplate.java:60) ~[flyway-database-postgresql-11.14.1.jar:na]
+	at org.flywaydb.database.postgresql.PostgreSQLConnection.lock(PostgreSQLConnection.java:105) ~[flyway-database-postgresql-11.14.1.jar:na]
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:164) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:153) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:104) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.Flyway.lambda$migrate$3(Flyway.java:245) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:240) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:186) ~[flyway-core-11.14.1.jar:na]
+	at org.springframework.boot.flyway.autoconfigure.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:67) ~[spring-boot-flyway-4.0.1.jar:4.0.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.2.jar:7.0.2]
+	... 22 common frames omitted
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: Failed to execute script V2__movies_table.sql
+---------------------------------------------
+SQL State  : 42703
+Error Code : 0
+Message    : ERROR: column "director_id" named in key does not exist
+  Position: 78
+Location   : db/migration/V2__movies_table.sql (/Users/portolan/projects/personal/directors/build/resources/main/db/migration/V2__movies_table.sql)
+Line       : 19
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:255) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:216) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:136) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.executeOnce(SqlMigrationExecutor.java:75) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.lambda$execute$0(SqlMigrationExecutor.java:66) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.database.DefaultExecutionStrategy.execute(DefaultExecutionStrategy.java:31) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:65) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:391) ~[flyway-core-11.14.1.jar:na]
+	... 41 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: column "director_id" named in key does not exist
+  Position: 78
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2421) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:525) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:357) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:342) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:318) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:313) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.executeStatement(JdbcTemplate.java:215) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.sqlscript.ParsedSqlStatement.execute(ParsedSqlStatement.java:88) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:211) ~[flyway-core-11.14.1.jar:na]
+	... 47 common frames omitted
+
+2026-01-16T16:33:09.991Z  INFO 8701 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Starting DirectorsApplication using Java 17.0.16 with PID 8701 (/Users/portolan/projects/personal/directors/build/classes/java/main started by portolan in /Users/portolan/projects/personal/directors)
+2026-01-16T16:33:09.993Z DEBUG 8701 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-01-16T16:33:09.993Z  INFO 8701 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-01-16T16:33:10.022Z  INFO 8701 --- [Director List] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-16T16:33:10.022Z  INFO 8701 --- [Director List] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-16T16:33:10.027Z  INFO 8701 --- [Director List] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file /Users/portolan/projects/personal/directors/compose.yaml
+2026-01-16T16:33:10.534Z  INFO 8701 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Creating
+2026-01-16T16:33:10.574Z  INFO 8701 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Created
+2026-01-16T16:33:10.586Z  INFO 8701 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Starting
+2026-01-16T16:33:10.753Z  INFO 8701 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Started
+2026-01-16T16:33:10.753Z  INFO 8701 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Waiting
+2026-01-16T16:33:11.255Z  INFO 8701 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Healthy
+2026-01-16T16:33:11.447Z ERROR 8701 --- [Director List] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: No host port mapping found for container port 5432
+	at org.springframework.util.Assert.state(Assert.java:102) ~[spring-core-7.0.2.jar:7.0.2]
+	at org.springframework.boot.docker.compose.core.DefaultConnectionPorts.get(DefaultConnectionPorts.java:102) ~[spring-boot-docker-compose-4.0.1.jar:4.0.1]
+	at org.springframework.boot.jdbc.docker.compose.JdbcUrlBuilder.urlFor(JdbcUrlBuilder.java:73) ~[spring-boot-jdbc-4.0.1.jar:4.0.1]
+	at org.springframework.boot.jdbc.docker.compose.JdbcUrlBuilder.build(JdbcUrlBuilder.java:67) ~[spring-boot-jdbc-4.0.1.jar:4.0.1]
+	at org.springframework.boot.jdbc.docker.compose.PostgresJdbcDockerComposeConnectionDetailsFactory$PostgresJdbcDockerComposeConnectionDetails.<init>(PostgresJdbcDockerComposeConnectionDetailsFactory.java:67) ~[spring-boot-jdbc-4.0.1.jar:4.0.1]
+	at org.springframework.boot.jdbc.docker.compose.PostgresJdbcDockerComposeConnectionDetailsFactory.getDockerComposeConnectionDetails(PostgresJdbcDockerComposeConnectionDetailsFactory.java:49) ~[spring-boot-jdbc-4.0.1.jar:4.0.1]
+	at org.springframework.boot.jdbc.docker.compose.PostgresJdbcDockerComposeConnectionDetailsFactory.getDockerComposeConnectionDetails(PostgresJdbcDockerComposeConnectionDetailsFactory.java:40) ~[spring-boot-jdbc-4.0.1.jar:4.0.1]
+	at org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionDetailsFactory.getConnectionDetails(DockerComposeConnectionDetailsFactory.java:98) ~[spring-boot-docker-compose-4.0.1.jar:4.0.1]
+	at org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionDetailsFactory.getConnectionDetails(DockerComposeConnectionDetailsFactory.java:59) ~[spring-boot-docker-compose-4.0.1.jar:4.0.1]
+	at org.springframework.boot.autoconfigure.service.connection.ConnectionDetailsFactories.getConnectionDetails(ConnectionDetailsFactories.java:87) ~[spring-boot-autoconfigure-4.0.1.jar:4.0.1]
+	at org.springframework.boot.docker.compose.service.connection.DockerComposeServiceConnectionsApplicationListener.registerConnectionDetails(DockerComposeServiceConnectionsApplicationListener.java:72) ~[spring-boot-docker-compose-4.0.1.jar:4.0.1]
+	at org.springframework.boot.docker.compose.service.connection.DockerComposeServiceConnectionsApplicationListener.onApplicationEvent(DockerComposeServiceConnectionsApplicationListener.java:64) ~[spring-boot-docker-compose-4.0.1.jar:4.0.1]
+	at org.springframework.boot.docker.compose.service.connection.DockerComposeServiceConnectionsApplicationListener.onApplicationEvent(DockerComposeServiceConnectionsApplicationListener.java:46) ~[spring-boot-docker-compose-4.0.1.jar:4.0.1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:180) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:173) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:151) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:133) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.boot.docker.compose.lifecycle.DockerComposeLifecycleManager.publishEvent(DockerComposeLifecycleManager.java:181) ~[spring-boot-docker-compose-4.0.1.jar:4.0.1]
+	at org.springframework.boot.docker.compose.lifecycle.DockerComposeLifecycleManager.start(DockerComposeLifecycleManager.java:147) ~[spring-boot-docker-compose-4.0.1.jar:4.0.1]
+	at org.springframework.boot.docker.compose.lifecycle.DockerComposeListener.onApplicationEvent(DockerComposeListener.java:53) ~[spring-boot-docker-compose-4.0.1.jar:4.0.1]
+	at org.springframework.boot.docker.compose.lifecycle.DockerComposeListener.onApplicationEvent(DockerComposeListener.java:35) ~[spring-boot-docker-compose-4.0.1.jar:4.0.1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:180) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:173) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:151) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:133) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:137) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.context.event.EventPublishingRunListener.contextLoaded(EventPublishingRunListener.java:99) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$contextLoaded$0(SpringApplicationRunListeners.java:74) ~[spring-boot-4.0.1.jar:4.0.1]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:123) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:117) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplicationRunListeners.contextLoaded(SpringApplicationRunListeners.java:74) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:418) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.1.jar:4.0.1]
+	at pt.pauloortolan.directors.DirectorsApplication.main(DirectorsApplication.java:16) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.1.jar:4.0.1]
+
+2026-01-16T16:34:02.438Z  INFO 8946 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Starting DirectorsApplication using Java 17.0.16 with PID 8946 (/Users/portolan/projects/personal/directors/build/classes/java/main started by portolan in /Users/portolan/projects/personal/directors)
+2026-01-16T16:34:02.439Z DEBUG 8946 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-01-16T16:34:02.440Z  INFO 8946 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-01-16T16:34:02.466Z  INFO 8946 --- [Director List] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-16T16:34:02.466Z  INFO 8946 --- [Director List] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-16T16:34:02.471Z  INFO 8946 --- [Director List] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file /Users/portolan/projects/personal/directors/compose.yaml
+2026-01-16T16:34:03.056Z  INFO 8946 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network directors_guestbooknetwork  Creating
+2026-01-16T16:34:03.097Z  INFO 8946 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network directors_guestbooknetwork  Created
+2026-01-16T16:34:03.098Z  INFO 8946 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Creating
+2026-01-16T16:34:03.142Z  INFO 8946 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Created
+2026-01-16T16:34:03.154Z  INFO 8946 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Starting
+2026-01-16T16:34:03.326Z  INFO 8946 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Started
+2026-01-16T16:34:03.327Z  INFO 8946 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Waiting
+2026-01-16T16:34:03.829Z  INFO 8946 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Healthy
+2026-01-16T16:34:05.688Z  INFO 8946 --- [Director List] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-16T16:34:05.709Z  INFO 8946 --- [Director List] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 2 JPA repository interfaces.
+2026-01-16T16:34:05.804Z  INFO 8946 --- [Director List] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=454c124e-ab2d-3b8f-bcc1-549dd05fd580
+2026-01-16T16:34:06.058Z  INFO 8946 --- [Director List] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-01-16T16:34:06.064Z  INFO 8946 --- [Director List] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-16T16:34:06.064Z  INFO 8946 --- [Director List] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-16T16:34:06.087Z  INFO 8946 --- [Director List] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 772 ms
+2026-01-16T16:34:06.352Z  INFO 8946 --- [Director List] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:9091/directors_db?ApplicationName=Director+List (PostgreSQL 18.0)
+2026-01-16T16:34:06.368Z  INFO 8946 --- [Director List] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "director_schema"."flyway_schema_history" does not exist yet
+2026-01-16T16:34:06.369Z  INFO 8946 --- [Director List] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.006s)
+2026-01-16T16:34:06.374Z  INFO 8946 --- [Director List] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "director_schema"."flyway_schema_history" ...
+2026-01-16T16:34:06.401Z  INFO 8946 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "director_schema": << Empty Schema >>
+2026-01-16T16:34:06.405Z  INFO 8946 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "director_schema" to version "1 - directors table"
+2026-01-16T16:34:06.418Z  INFO 8946 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "director_schema" to version "2 - movies table"
+2026-01-16T16:34:06.427Z ERROR 8946 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Migration of schema "director_schema" to version "2 - movies table" failed! Changes successfully rolled back.
+2026-01-16T16:34:06.433Z  WARN 8946 --- [Director List] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Failed to execute script V2__movies_table.sql
+---------------------------------------------
+SQL State  : 42703
+Error Code : 0
+Message    : ERROR: column "director_id" named in key does not exist
+  Position: 78
+Location   : db/migration/V2__movies_table.sql (/Users/portolan/projects/personal/directors/build/resources/main/db/migration/V2__movies_table.sql)
+Line       : 19
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+2026-01-16T16:34:06.435Z  INFO 8946 --- [Director List] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-01-16T16:34:06.440Z  INFO 8946 --- [Director List] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-16T16:34:06.446Z ERROR 8946 --- [Director List] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Failed to execute script V2__movies_table.sql
+---------------------------------------------
+SQL State  : 42703
+Error Code : 0
+Message    : ERROR: column "director_id" named in key does not exist
+  Position: 78
+Location   : db/migration/V2__movies_table.sql (/Users/portolan/projects/personal/directors/build/resources/main/db/migration/V2__movies_table.sql)
+Line       : 19
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:976) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:620) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.1.jar:4.0.1]
+	at pt.pauloortolan.directors.DirectorsApplication.main(DirectorsApplication.java:16) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.1.jar:4.0.1]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Failed to execute script V2__movies_table.sql
+---------------------------------------------
+SQL State  : 42703
+Error Code : 0
+Message    : ERROR: column "director_id" named in key does not exist
+  Position: 78
+Location   : db/migration/V2__movies_table.sql (/Users/portolan/projects/personal/directors/build/resources/main/db/migration/V2__movies_table.sql)
+Line       : 19
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:309) ~[spring-beans-7.0.2.jar:7.0.2]
+	... 15 common frames omitted
+Caused by: org.flywaydb.core.internal.exception.FlywayMigrateException: Failed to execute script V2__movies_table.sql
+---------------------------------------------
+SQL State  : 42703
+Error Code : 0
+Message    : ERROR: column "director_id" named in key does not exist
+  Position: 78
+Location   : db/migration/V2__movies_table.sql (/Users/portolan/projects/personal/directors/build/resources/main/db/migration/V2__movies_table.sql)
+Line       : 19
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:399) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$applyMigrations$1(DbMigrate.java:283) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:59) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.applyMigrations(DbMigrate.java:282) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:255) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$migrateAll$0(DbMigrate.java:153) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.database.postgresql.PostgreSQLAdvisoryLockTemplate.execute(PostgreSQLAdvisoryLockTemplate.java:77) ~[flyway-database-postgresql-11.14.1.jar:na]
+	at org.flywaydb.database.postgresql.PostgreSQLAdvisoryLockTemplate.lambda$execute$0(PostgreSQLAdvisoryLockTemplate.java:60) ~[flyway-database-postgresql-11.14.1.jar:na]
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:59) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.database.postgresql.PostgreSQLAdvisoryLockTemplate.execute(PostgreSQLAdvisoryLockTemplate.java:60) ~[flyway-database-postgresql-11.14.1.jar:na]
+	at org.flywaydb.database.postgresql.PostgreSQLConnection.lock(PostgreSQLConnection.java:105) ~[flyway-database-postgresql-11.14.1.jar:na]
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:164) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:153) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:104) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.Flyway.lambda$migrate$3(Flyway.java:245) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:240) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:186) ~[flyway-core-11.14.1.jar:na]
+	at org.springframework.boot.flyway.autoconfigure.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:67) ~[spring-boot-flyway-4.0.1.jar:4.0.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.2.jar:7.0.2]
+	... 22 common frames omitted
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: Failed to execute script V2__movies_table.sql
+---------------------------------------------
+SQL State  : 42703
+Error Code : 0
+Message    : ERROR: column "director_id" named in key does not exist
+  Position: 78
+Location   : db/migration/V2__movies_table.sql (/Users/portolan/projects/personal/directors/build/resources/main/db/migration/V2__movies_table.sql)
+Line       : 19
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:255) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:216) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:136) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.executeOnce(SqlMigrationExecutor.java:75) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.lambda$execute$0(SqlMigrationExecutor.java:66) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.database.DefaultExecutionStrategy.execute(DefaultExecutionStrategy.java:31) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:65) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:391) ~[flyway-core-11.14.1.jar:na]
+	... 41 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: column "director_id" named in key does not exist
+  Position: 78
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2421) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:525) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:357) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:342) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:318) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:313) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.executeStatement(JdbcTemplate.java:215) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.sqlscript.ParsedSqlStatement.execute(ParsedSqlStatement.java:88) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:211) ~[flyway-core-11.14.1.jar:na]
+	... 47 common frames omitted
+
+2026-01-16T16:41:24.926Z  INFO 12884 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Starting DirectorsApplication using Java 17.0.16 with PID 12884 (/Users/portolan/projects/personal/directors/build/classes/java/main started by portolan in /Users/portolan/projects/personal/directors)
+2026-01-16T16:41:24.927Z DEBUG 12884 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-01-16T16:41:24.927Z  INFO 12884 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-01-16T16:41:24.951Z  INFO 12884 --- [Director List] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-16T16:41:24.951Z  INFO 12884 --- [Director List] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-16T16:41:24.956Z  INFO 12884 --- [Director List] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file /Users/portolan/projects/personal/directors/compose.yaml
+2026-01-16T16:41:25.435Z  INFO 12884 --- [Director List] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-01-16T16:41:25.786Z  INFO 12884 --- [Director List] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-16T16:41:25.807Z  INFO 12884 --- [Director List] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 2 JPA repository interfaces.
+2026-01-16T16:41:25.892Z  INFO 12884 --- [Director List] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=454c124e-ab2d-3b8f-bcc1-549dd05fd580
+2026-01-16T16:41:26.130Z  INFO 12884 --- [Director List] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-01-16T16:41:26.136Z  INFO 12884 --- [Director List] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-16T16:41:26.136Z  INFO 12884 --- [Director List] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-16T16:41:26.155Z  INFO 12884 --- [Director List] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 718 ms
+2026-01-16T16:41:26.407Z  INFO 12884 --- [Director List] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:9091/directors_db?ApplicationName=Director+List (PostgreSQL 18.0)
+2026-01-16T16:41:26.439Z  INFO 12884 --- [Director List] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "director_schema"."flyway_schema_history" does not exist yet
+2026-01-16T16:41:26.442Z  INFO 12884 --- [Director List] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.011s)
+2026-01-16T16:41:26.465Z  INFO 12884 --- [Director List] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "director_schema"."flyway_schema_history" ...
+2026-01-16T16:41:26.517Z  INFO 12884 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "director_schema": << Empty Schema >>
+2026-01-16T16:41:26.522Z  INFO 12884 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "director_schema" to version "1 - directors table"
+2026-01-16T16:41:26.548Z  INFO 12884 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "director_schema" to version "2 - movies table"
+2026-01-16T16:41:26.569Z  INFO 12884 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "director_schema", now at version v2 (execution time 00:00.022s)
+2026-01-16T16:41:26.597Z  INFO 12884 --- [Director List] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-16T16:41:26.613Z  INFO 12884 --- [Director List] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@570137b5
+2026-01-16T16:41:26.614Z  INFO 12884 --- [Director List] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-16T16:41:26.630Z  INFO 12884 --- [Director List] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-16T16:41:26.665Z  INFO 12884 --- [Director List] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-01-16T16:41:26.854Z  INFO 12884 --- [Director List] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-16T16:41:26.905Z  INFO 12884 --- [Director List] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:9091/directors_db?ApplicationName=Director+List]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: directors_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-16T16:41:27.266Z  INFO 12884 --- [Director List] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-16T16:41:27.267Z  INFO 12884 --- [Director List] [restartedMain] org.hibernate.orm.jdbc.batch             : HHH100501: Automatic JDBC statement batching enabled (maximum batch size 10)
+2026-01-16T16:41:27.269Z  INFO 12884 --- [Director List] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-16T16:41:27.317Z  INFO 12884 --- [Director List] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-16T16:41:27.413Z  WARN 12884 --- [Director List] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-16T16:41:27.640Z DEBUG 12884 --- [Director List] [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : File system access not preferred: using SpringTemplateLoader
+2026-01-16T16:41:27.676Z  INFO 12884 --- [Director List] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-01-16T16:41:27.706Z  INFO 12884 --- [Director List] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-01-16T16:41:27.713Z  INFO 12884 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Started DirectorsApplication in 3.003 seconds (process running for 3.419)
+2026-01-16T16:41:31.926Z  INFO 12884 --- [Director List] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-16T16:41:31.928Z  INFO 12884 --- [Director List] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-01-16T16:41:31.931Z  INFO 12884 --- [Director List] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-16T16:41:31.933Z  INFO 12884 --- [Director List] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-16T16:41:31.934Z  INFO 12884 --- [Director List] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-16T16:41:34.462Z  INFO 12946 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Starting DirectorsApplication using Java 17.0.16 with PID 12946 (/Users/portolan/projects/personal/directors/build/classes/java/main started by portolan in /Users/portolan/projects/personal/directors)
+2026-01-16T16:41:34.464Z DEBUG 12946 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-01-16T16:41:34.464Z  INFO 12946 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-01-16T16:41:34.489Z  INFO 12946 --- [Director List] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-16T16:41:34.490Z  INFO 12946 --- [Director List] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-16T16:41:34.495Z  INFO 12946 --- [Director List] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file /Users/portolan/projects/personal/directors/compose.yaml
+2026-01-16T16:41:34.874Z  INFO 12946 --- [Director List] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-01-16T16:41:35.208Z  INFO 12946 --- [Director List] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-16T16:41:35.229Z  INFO 12946 --- [Director List] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
+2026-01-16T16:41:35.325Z  INFO 12946 --- [Director List] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=454c124e-ab2d-3b8f-bcc1-549dd05fd580
+2026-01-16T16:41:35.596Z  INFO 12946 --- [Director List] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-01-16T16:41:35.601Z  INFO 12946 --- [Director List] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-16T16:41:35.602Z  INFO 12946 --- [Director List] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-16T16:41:35.622Z  INFO 12946 --- [Director List] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 745 ms
+2026-01-16T16:41:35.880Z  INFO 12946 --- [Director List] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:9091/directors_db?ApplicationName=Director+List (PostgreSQL 18.0)
+2026-01-16T16:41:35.922Z  INFO 12946 --- [Director List] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.018s)
+2026-01-16T16:41:35.961Z  INFO 12946 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "director_schema": 2
+2026-01-16T16:41:35.963Z  INFO 12946 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "director_schema" is up to date. No migration necessary.
+2026-01-16T16:41:35.992Z  INFO 12946 --- [Director List] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-16T16:41:36.019Z  INFO 12946 --- [Director List] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7a1e2d65
+2026-01-16T16:41:36.020Z  INFO 12946 --- [Director List] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-16T16:41:36.032Z  INFO 12946 --- [Director List] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-16T16:41:36.059Z  INFO 12946 --- [Director List] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-01-16T16:41:36.262Z  INFO 12946 --- [Director List] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-16T16:41:36.314Z  INFO 12946 --- [Director List] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:9091/directors_db?ApplicationName=Director+List]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: directors_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-16T16:41:36.718Z  INFO 12946 --- [Director List] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-16T16:41:36.720Z  INFO 12946 --- [Director List] [restartedMain] org.hibernate.orm.jdbc.batch             : HHH100501: Automatic JDBC statement batching enabled (maximum batch size 10)
+2026-01-16T16:41:36.722Z  INFO 12946 --- [Director List] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-16T16:41:36.775Z  INFO 12946 --- [Director List] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-16T16:41:36.875Z  WARN 12946 --- [Director List] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-16T16:41:37.140Z DEBUG 12946 --- [Director List] [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : File system access not preferred: using SpringTemplateLoader
+2026-01-16T16:41:37.181Z  INFO 12946 --- [Director List] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-01-16T16:41:37.217Z  INFO 12946 --- [Director List] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-01-16T16:41:37.224Z  INFO 12946 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Started DirectorsApplication in 2.96 seconds (process running for 3.328)
+2026-01-16T16:41:48.130Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-16T16:41:48.131Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-16T16:41:48.132Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-01-16T16:41:48.171Z  WARN 12946 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobOperator      : Attempting to launch job: [Directors-Job] which defines an incrementer with additional parameters: [{JobParameter{name='executionId', value=28d80acc-a352-4f14-b9c4-40ddce55b31e, type=class java.lang.String, identifying=true},JobParameter{name='startedAt', value=1768581708151, type=class java.lang.Long, identifying=true}}]. Additional parameters will be ignored.
+2026-01-16T16:41:48.171Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobOperator      : Launching next instance of job: [Directors-Job] with parameters: [{JobParameter{name='run.id', value=1, type=class java.lang.Long, identifying=true}}]
+2026-01-16T16:41:48.172Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobLauncher      : Job: [SimpleJob: [name=Directors-Job]] launched with the following parameters: [{JobParameter{name='run.id', value=1, type=class java.lang.Long, identifying=true}}]
+2026-01-16T16:41:48.175Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] o.s.batch.core.job.SimpleStepHandler     : Executing step: [Director-Import-Step]
+2026-01-16T16:41:48.682Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] o.s.batch.core.step.AbstractStep         : Step: [Director-Import-Step] executed in 506ms
+2026-01-16T16:41:48.683Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] o.s.batch.core.job.SimpleStepHandler     : Executing step: [Movie-Import-step]
+2026-01-16T16:41:48.683Z DEBUG 12946 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterReader      : Reading page 0
+2026-01-16T16:41:48.693Z DEBUG 12946 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterReader      : Reading page 1
+2026-01-16T16:41:49.080Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Abbas Kiarostami (TMDB ID: 119294)
+2026-01-16T16:41:49.331Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Ana Lily Amirpour (TMDB ID: 1289604)
+2026-01-16T16:41:49.530Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Agnès Varda (TMDB ID: 6817)
+2026-01-16T16:41:49.788Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Akira Kurosawa (TMDB ID: 5026)
+2026-01-16T16:41:49.988Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Alfred Hitchcock (TMDB ID: 2636)
+2026-01-16T16:41:50.208Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Anna Muylaert (TMDB ID: 550280)
+2026-01-16T16:41:50.529Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Andrei Tarkovsky (TMDB ID: 8452)
+2026-01-16T16:41:50.719Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Anthony Russo (TMDB ID: 19271)
+2026-01-16T16:41:50.909Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Apichatpong Weerasethakul (TMDB ID: 69759)
+2026-01-16T16:41:51.106Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Ari Aster (TMDB ID: 1145520)
+2026-01-16T16:41:51.295Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Asghar Farhadi (TMDB ID: 229931)
+2026-01-16T16:41:51.591Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Billy Wilder (TMDB ID: 3146)
+2026-01-16T16:41:51.794Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Bong Joon-ho (TMDB ID: 21684)
+2026-01-16T16:41:51.991Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Brian De Palma (TMDB ID: 1150)
+2026-01-16T16:41:52.189Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Cacá Diegues (TMDB ID: 112117)
+2026-01-16T16:41:52.390Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Carl Theodor Dreyer (TMDB ID: 11572)
+2026-01-16T16:41:52.687Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Carlos Saura (TMDB ID: 96369)
+2026-01-16T16:41:52.884Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Charlie Chaplin (TMDB ID: 13848)
+2026-01-16T16:41:53.100Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Chris Columbus (TMDB ID: 10965)
+2026-01-16T16:41:53.288Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Christopher Nolan (TMDB ID: 525)
+2026-01-16T16:42:10.401Z ERROR 12946 --- [Director List] [http-nio-9090-exec-1] o.s.b.core.step.item.ChunkOrientedStep   : Retry exhausted after last attempt in recovery path, but exception is not skippable
+2026-01-16T16:42:10.402Z ERROR 12946 --- [Director List] [http-nio-9090-exec-1] o.s.b.core.step.item.ChunkOrientedStep   : Rolling back chunk transaction
+
+org.hibernate.LazyInitializationException: Could not initialize proxy [pt.pauloortolan.directors.persistence.entities.Director#78aa8ad4-35f1-4f24-b4dd-fd2a80f1f594] - no session
+	at org.hibernate.proxy.AbstractLazyInitializer.initialize(AbstractLazyInitializer.java:170) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.proxy.AbstractLazyInitializer.getImplementation(AbstractLazyInitializer.java:323) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor.intercept(ByteBuddyInterceptor.java:42) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.proxy.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:95) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at pt.pauloortolan.directors.persistence.entities.Director$HibernateProxy.getMovies(Unknown Source) ~[main/:na]
+	at pt.pauloortolan.directors.batch.directors.step2.MovieImporterWriter.write(MovieImporterWriter.java:35) ~[main/:na]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.doWrite(ChunkOrientedStep.java:733) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.writeChunk(ChunkOrientedStep.java:683) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processChunkSequentially(ChunkOrientedStep.java:449) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processNextChunk(ChunkOrientedStep.java:389) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.lambda$doExecute$0(ChunkOrientedStep.java:373) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.transaction.support.TransactionOperations.lambda$executeWithoutResult$0(TransactionOperations.java:68) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:137) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.support.TransactionOperations.executeWithoutResult(TransactionOperations.java:67) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.doExecute(ChunkOrientedStep.java:368) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:247) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:131) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:397) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:129) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:293) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher$1.run(TaskExecutorJobLauncher.java:220) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:61) ~[spring-core-7.0.2.jar:7.0.2]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.launchJobExecution(TaskExecutorJobLauncher.java:211) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.run(TaskExecutorJobLauncher.java:109) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.SimpleJobOperator.startNextInstance(SimpleJobOperator.java:294) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobOperator.startNextInstance(TaskExecutorJobOperator.java:133) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.SimpleJobOperator.start(SimpleJobOperator.java:199) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobOperator.start(TaskExecutorJobOperator.java:117) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:370) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222) ~[spring-aop-7.0.2.jar:7.0.2]
+	at jdk.proxy2/jdk.proxy2.$Proxy171.start(Unknown Source) ~[na:na]
+	at pt.pauloortolan.directors.controllers.BatchController.startDirectorsJob(BatchController.java:33) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.15.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.15.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-16T16:42:10.408Z ERROR 12946 --- [Director List] [http-nio-9090-exec-1] o.s.batch.core.step.AbstractStep         : Encountered an error executing step Movie-Import-step in job Directors-Job
+
+org.springframework.batch.core.step.FatalStepExecutionException: Unable to process chunk
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processChunkSequentially(ChunkOrientedStep.java:458) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processNextChunk(ChunkOrientedStep.java:389) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.lambda$doExecute$0(ChunkOrientedStep.java:373) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.transaction.support.TransactionOperations.lambda$executeWithoutResult$0(TransactionOperations.java:68) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:137) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.support.TransactionOperations.executeWithoutResult(TransactionOperations.java:67) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.doExecute(ChunkOrientedStep.java:368) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:247) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:131) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:397) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:129) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:293) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher$1.run(TaskExecutorJobLauncher.java:220) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:61) ~[spring-core-7.0.2.jar:7.0.2]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.launchJobExecution(TaskExecutorJobLauncher.java:211) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.run(TaskExecutorJobLauncher.java:109) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.SimpleJobOperator.startNextInstance(SimpleJobOperator.java:294) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobOperator.startNextInstance(TaskExecutorJobOperator.java:133) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.SimpleJobOperator.start(SimpleJobOperator.java:199) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobOperator.start(TaskExecutorJobOperator.java:117) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:370) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222) ~[spring-aop-7.0.2.jar:7.0.2]
+	at jdk.proxy2/jdk.proxy2.$Proxy171.start(Unknown Source) ~[na:na]
+	at pt.pauloortolan.directors.controllers.BatchController.startDirectorsJob(BatchController.java:33) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.15.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.15.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: org.hibernate.LazyInitializationException: Could not initialize proxy [pt.pauloortolan.directors.persistence.entities.Director#78aa8ad4-35f1-4f24-b4dd-fd2a80f1f594] - no session
+	at org.hibernate.proxy.AbstractLazyInitializer.initialize(AbstractLazyInitializer.java:170) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.proxy.AbstractLazyInitializer.getImplementation(AbstractLazyInitializer.java:323) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor.intercept(ByteBuddyInterceptor.java:42) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.proxy.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:95) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at pt.pauloortolan.directors.persistence.entities.Director$HibernateProxy.getMovies(Unknown Source) ~[main/:na]
+	at pt.pauloortolan.directors.batch.directors.step2.MovieImporterWriter.write(MovieImporterWriter.java:35) ~[main/:na]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.doWrite(ChunkOrientedStep.java:733) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.writeChunk(ChunkOrientedStep.java:683) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processChunkSequentially(ChunkOrientedStep.java:449) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	... 80 common frames omitted
+
+2026-01-16T16:42:10.409Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] o.s.batch.core.step.AbstractStep         : Step: [Movie-Import-step] executed in 21s726ms
+2026-01-16T16:42:10.410Z  INFO 12946 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobLauncher      : Job: [SimpleJob: [name=Directors-Job]] completed with the following parameters: [{JobParameter{name='run.id', value=1, type=class java.lang.Long, identifying=true}}] and the following status: [FAILED] in 22s235ms
+2026-01-16T16:44:18.296Z  INFO 12946 --- [Director List] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-16T16:44:18.299Z  INFO 12946 --- [Director List] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-01-16T16:44:18.304Z  INFO 12946 --- [Director List] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-16T16:44:18.307Z  INFO 12946 --- [Director List] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-16T16:44:18.309Z  INFO 12946 --- [Director List] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-16T16:49:58.158Z  INFO 15109 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Starting DirectorsApplication using Java 17.0.16 with PID 15109 (/Users/portolan/projects/personal/directors/build/classes/java/main started by portolan in /Users/portolan/projects/personal/directors)
+2026-01-16T16:49:58.159Z DEBUG 15109 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-01-16T16:49:58.159Z  INFO 15109 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-01-16T16:49:58.177Z  INFO 15109 --- [Director List] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-16T16:49:58.178Z  INFO 15109 --- [Director List] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-16T16:49:58.182Z  INFO 15109 --- [Director List] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file /Users/portolan/projects/personal/directors/compose.yaml
+2026-01-16T16:49:58.739Z  INFO 15109 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network directors_guestbooknetwork  Creating
+2026-01-16T16:49:58.788Z  INFO 15109 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network directors_guestbooknetwork  Created
+2026-01-16T16:49:58.789Z  INFO 15109 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Creating
+2026-01-16T16:49:58.835Z  INFO 15109 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Created
+2026-01-16T16:49:58.850Z  INFO 15109 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Starting
+2026-01-16T16:49:59.014Z  INFO 15109 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Started
+2026-01-16T16:49:59.015Z  INFO 15109 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Waiting
+2026-01-16T16:49:59.518Z  INFO 15109 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Healthy
+2026-01-16T16:49:59.699Z ERROR 15109 --- [Director List] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: No host port mapping found for container port 5432
+	at org.springframework.util.Assert.state(Assert.java:102) ~[spring-core-7.0.2.jar:7.0.2]
+	at org.springframework.boot.docker.compose.core.DefaultConnectionPorts.get(DefaultConnectionPorts.java:102) ~[spring-boot-docker-compose-4.0.1.jar:4.0.1]
+	at org.springframework.boot.jdbc.docker.compose.JdbcUrlBuilder.urlFor(JdbcUrlBuilder.java:73) ~[spring-boot-jdbc-4.0.1.jar:4.0.1]
+	at org.springframework.boot.jdbc.docker.compose.JdbcUrlBuilder.build(JdbcUrlBuilder.java:67) ~[spring-boot-jdbc-4.0.1.jar:4.0.1]
+	at org.springframework.boot.jdbc.docker.compose.PostgresJdbcDockerComposeConnectionDetailsFactory$PostgresJdbcDockerComposeConnectionDetails.<init>(PostgresJdbcDockerComposeConnectionDetailsFactory.java:67) ~[spring-boot-jdbc-4.0.1.jar:4.0.1]
+	at org.springframework.boot.jdbc.docker.compose.PostgresJdbcDockerComposeConnectionDetailsFactory.getDockerComposeConnectionDetails(PostgresJdbcDockerComposeConnectionDetailsFactory.java:49) ~[spring-boot-jdbc-4.0.1.jar:4.0.1]
+	at org.springframework.boot.jdbc.docker.compose.PostgresJdbcDockerComposeConnectionDetailsFactory.getDockerComposeConnectionDetails(PostgresJdbcDockerComposeConnectionDetailsFactory.java:40) ~[spring-boot-jdbc-4.0.1.jar:4.0.1]
+	at org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionDetailsFactory.getConnectionDetails(DockerComposeConnectionDetailsFactory.java:98) ~[spring-boot-docker-compose-4.0.1.jar:4.0.1]
+	at org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionDetailsFactory.getConnectionDetails(DockerComposeConnectionDetailsFactory.java:59) ~[spring-boot-docker-compose-4.0.1.jar:4.0.1]
+	at org.springframework.boot.autoconfigure.service.connection.ConnectionDetailsFactories.getConnectionDetails(ConnectionDetailsFactories.java:87) ~[spring-boot-autoconfigure-4.0.1.jar:4.0.1]
+	at org.springframework.boot.docker.compose.service.connection.DockerComposeServiceConnectionsApplicationListener.registerConnectionDetails(DockerComposeServiceConnectionsApplicationListener.java:72) ~[spring-boot-docker-compose-4.0.1.jar:4.0.1]
+	at org.springframework.boot.docker.compose.service.connection.DockerComposeServiceConnectionsApplicationListener.onApplicationEvent(DockerComposeServiceConnectionsApplicationListener.java:64) ~[spring-boot-docker-compose-4.0.1.jar:4.0.1]
+	at org.springframework.boot.docker.compose.service.connection.DockerComposeServiceConnectionsApplicationListener.onApplicationEvent(DockerComposeServiceConnectionsApplicationListener.java:46) ~[spring-boot-docker-compose-4.0.1.jar:4.0.1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:180) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:173) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:151) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:133) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.boot.docker.compose.lifecycle.DockerComposeLifecycleManager.publishEvent(DockerComposeLifecycleManager.java:181) ~[spring-boot-docker-compose-4.0.1.jar:4.0.1]
+	at org.springframework.boot.docker.compose.lifecycle.DockerComposeLifecycleManager.start(DockerComposeLifecycleManager.java:147) ~[spring-boot-docker-compose-4.0.1.jar:4.0.1]
+	at org.springframework.boot.docker.compose.lifecycle.DockerComposeListener.onApplicationEvent(DockerComposeListener.java:53) ~[spring-boot-docker-compose-4.0.1.jar:4.0.1]
+	at org.springframework.boot.docker.compose.lifecycle.DockerComposeListener.onApplicationEvent(DockerComposeListener.java:35) ~[spring-boot-docker-compose-4.0.1.jar:4.0.1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:180) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:173) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:151) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:133) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:137) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.context.event.EventPublishingRunListener.contextLoaded(EventPublishingRunListener.java:99) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$contextLoaded$0(SpringApplicationRunListeners.java:74) ~[spring-boot-4.0.1.jar:4.0.1]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:123) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:117) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplicationRunListeners.contextLoaded(SpringApplicationRunListeners.java:74) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:418) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.1.jar:4.0.1]
+	at pt.pauloortolan.directors.DirectorsApplication.main(DirectorsApplication.java:16) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.1.jar:4.0.1]
+
+2026-01-16T16:50:34.292Z  INFO 15294 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Starting DirectorsApplication using Java 17.0.16 with PID 15294 (/Users/portolan/projects/personal/directors/build/classes/java/main started by portolan in /Users/portolan/projects/personal/directors)
+2026-01-16T16:50:34.294Z DEBUG 15294 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-01-16T16:50:34.294Z  INFO 15294 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-01-16T16:50:34.317Z  INFO 15294 --- [Director List] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-16T16:50:34.317Z  INFO 15294 --- [Director List] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-16T16:50:34.322Z  INFO 15294 --- [Director List] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file /Users/portolan/projects/personal/directors/compose.yaml
+2026-01-16T16:50:34.859Z  INFO 15294 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network directors_guestbooknetwork  Creating
+2026-01-16T16:50:34.900Z  INFO 15294 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network directors_guestbooknetwork  Created
+2026-01-16T16:50:34.902Z  INFO 15294 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Creating
+2026-01-16T16:50:34.943Z  INFO 15294 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Created
+2026-01-16T16:50:34.955Z  INFO 15294 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Starting
+2026-01-16T16:50:35.114Z  INFO 15294 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Started
+2026-01-16T16:50:35.114Z  INFO 15294 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Waiting
+2026-01-16T16:50:35.616Z  INFO 15294 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Healthy
+2026-01-16T16:50:37.491Z  INFO 15294 --- [Director List] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-16T16:50:37.512Z  INFO 15294 --- [Director List] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
+2026-01-16T16:50:37.609Z  INFO 15294 --- [Director List] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=454c124e-ab2d-3b8f-bcc1-549dd05fd580
+2026-01-16T16:50:37.864Z  INFO 15294 --- [Director List] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-01-16T16:50:37.870Z  INFO 15294 --- [Director List] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-16T16:50:37.870Z  INFO 15294 --- [Director List] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-16T16:50:37.890Z  INFO 15294 --- [Director List] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 747 ms
+2026-01-16T16:50:38.156Z  INFO 15294 --- [Director List] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:9091/directors_db?ApplicationName=Director+List (PostgreSQL 18.0)
+2026-01-16T16:50:38.187Z  INFO 15294 --- [Director List] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "director_schema"."flyway_schema_history" does not exist yet
+2026-01-16T16:50:38.189Z  INFO 15294 --- [Director List] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.011s)
+2026-01-16T16:50:38.209Z  INFO 15294 --- [Director List] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "director_schema"."flyway_schema_history" ...
+2026-01-16T16:50:38.267Z  INFO 15294 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "director_schema": << Empty Schema >>
+2026-01-16T16:50:38.273Z  INFO 15294 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "director_schema" to version "1 - directors table"
+2026-01-16T16:50:38.309Z  INFO 15294 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "director_schema" to version "2 - movies table"
+2026-01-16T16:50:38.333Z  INFO 15294 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "director_schema", now at version v2 (execution time 00:00.030s)
+2026-01-16T16:50:38.364Z  INFO 15294 --- [Director List] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-16T16:50:38.389Z  INFO 15294 --- [Director List] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@22fddd5e
+2026-01-16T16:50:38.390Z  INFO 15294 --- [Director List] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-16T16:50:38.406Z  INFO 15294 --- [Director List] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-16T16:50:38.433Z  INFO 15294 --- [Director List] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-01-16T16:50:38.636Z  INFO 15294 --- [Director List] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-16T16:50:38.685Z  INFO 15294 --- [Director List] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:9091/directors_db?ApplicationName=Director+List]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: directors_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-16T16:50:39.071Z  INFO 15294 --- [Director List] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-16T16:50:39.073Z  INFO 15294 --- [Director List] [restartedMain] org.hibernate.orm.jdbc.batch             : HHH100501: Automatic JDBC statement batching enabled (maximum batch size 10)
+2026-01-16T16:50:39.075Z  INFO 15294 --- [Director List] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-16T16:50:39.127Z  INFO 15294 --- [Director List] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-16T16:50:39.228Z  WARN 15294 --- [Director List] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-16T16:50:39.500Z DEBUG 15294 --- [Director List] [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : File system access not preferred: using SpringTemplateLoader
+2026-01-16T16:50:39.540Z  INFO 15294 --- [Director List] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-01-16T16:50:39.573Z  INFO 15294 --- [Director List] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-01-16T16:50:39.580Z  INFO 15294 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Started DirectorsApplication in 5.493 seconds (process running for 5.937)
+2026-01-16T16:51:43.802Z  INFO 15294 --- [Director List] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-16T16:51:43.803Z  INFO 15294 --- [Director List] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-16T16:51:43.804Z  INFO 15294 --- [Director List] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-01-16T16:51:43.839Z  WARN 15294 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobOperator      : Attempting to launch job: [Directors-Job] which defines an incrementer with additional parameters: [{JobParameter{name='executionId', value=d3043680-2dd5-441b-8267-eb309793bca6, type=class java.lang.String, identifying=true},JobParameter{name='startedAt', value=1768582303820, type=class java.lang.Long, identifying=true}}]. Additional parameters will be ignored.
+2026-01-16T16:51:43.839Z  INFO 15294 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobOperator      : Launching next instance of job: [Directors-Job] with parameters: [{JobParameter{name='run.id', value=1, type=class java.lang.Long, identifying=true}}]
+2026-01-16T16:51:43.840Z  INFO 15294 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobLauncher      : Job: [SimpleJob: [name=Directors-Job]] launched with the following parameters: [{JobParameter{name='run.id', value=1, type=class java.lang.Long, identifying=true}}]
+2026-01-16T16:51:43.843Z  INFO 15294 --- [Director List] [http-nio-9090-exec-1] o.s.batch.core.job.SimpleStepHandler     : Executing step: [Director-Import-Step]
+2026-01-16T16:51:44.371Z  INFO 15294 --- [Director List] [http-nio-9090-exec-1] o.s.batch.core.step.AbstractStep         : Step: [Director-Import-Step] executed in 527ms
+2026-01-16T16:51:44.372Z  INFO 15294 --- [Director List] [http-nio-9090-exec-1] o.s.batch.core.job.SimpleStepHandler     : Executing step: [Movie-Import-step]
+2026-01-16T16:51:44.372Z DEBUG 15294 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterReader      : Reading page 0
+2026-01-16T16:51:44.379Z DEBUG 15294 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterReader      : Reading page 1
+2026-01-16T16:51:44.739Z  INFO 15294 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Abbas Kiarostami (TMDB ID: 119294)
+2026-01-16T16:51:44.992Z  INFO 15294 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Ana Lily Amirpour (TMDB ID: 1289604)
+2026-01-16T16:51:45.177Z  INFO 15294 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Agnès Varda (TMDB ID: 6817)
+2026-01-16T16:51:45.390Z  INFO 15294 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Akira Kurosawa (TMDB ID: 5026)
+2026-01-16T16:51:45.591Z  INFO 15294 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Alfred Hitchcock (TMDB ID: 2636)
+2026-01-16T16:51:45.976Z  INFO 15294 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Anna Muylaert (TMDB ID: 550280)
+2026-01-16T16:51:46.169Z  INFO 15294 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Andrei Tarkovsky (TMDB ID: 8452)
+2026-01-16T16:51:46.361Z  INFO 15294 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Anthony Russo (TMDB ID: 19271)
+2026-01-16T16:51:46.557Z  INFO 15294 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Apichatpong Weerasethakul (TMDB ID: 69759)
+2026-01-16T16:51:46.758Z  INFO 15294 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Ari Aster (TMDB ID: 1145520)
+2026-01-16T16:51:46.951Z  INFO 15294 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Asghar Farhadi (TMDB ID: 229931)
+2026-01-16T16:51:47.140Z  INFO 15294 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Billy Wilder (TMDB ID: 3146)
+2026-01-16T16:51:47.336Z  INFO 15294 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Bong Joon-ho (TMDB ID: 21684)
+2026-01-16T16:51:47.525Z  INFO 15294 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Brian De Palma (TMDB ID: 1150)
+2026-01-16T16:51:47.720Z  INFO 15294 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Cacá Diegues (TMDB ID: 112117)
+2026-01-16T16:51:47.914Z  INFO 15294 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Carl Theodor Dreyer (TMDB ID: 11572)
+2026-01-16T16:51:48.108Z  INFO 15294 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Carlos Saura (TMDB ID: 96369)
+2026-01-16T16:51:48.302Z  INFO 15294 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Charlie Chaplin (TMDB ID: 13848)
+2026-01-16T16:51:48.521Z  INFO 15294 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Chris Columbus (TMDB ID: 10965)
+2026-01-16T16:51:48.828Z  INFO 15294 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Christopher Nolan (TMDB ID: 525)
+2026-01-16T16:52:19.961Z  INFO 15294 --- [Director List] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-16T16:53:24.829Z  INFO 16073 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Starting DirectorsApplication using Java 17.0.16 with PID 16073 (/Users/portolan/projects/personal/directors/build/classes/java/main started by portolan in /Users/portolan/projects/personal/directors)
+2026-01-16T16:53:24.830Z DEBUG 16073 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-01-16T16:53:24.831Z  INFO 16073 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-01-16T16:53:24.853Z  INFO 16073 --- [Director List] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-16T16:53:24.853Z  INFO 16073 --- [Director List] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-16T16:53:24.858Z  INFO 16073 --- [Director List] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file /Users/portolan/projects/personal/directors/compose.yaml
+2026-01-16T16:53:25.474Z  INFO 16073 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network directors_guestbooknetwork  Creating
+2026-01-16T16:53:25.517Z  INFO 16073 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network directors_guestbooknetwork  Created
+2026-01-16T16:53:25.519Z  INFO 16073 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Creating
+2026-01-16T16:53:25.569Z  INFO 16073 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Created
+2026-01-16T16:53:25.581Z  INFO 16073 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Starting
+2026-01-16T16:53:25.723Z  INFO 16073 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Started
+2026-01-16T16:53:25.724Z  INFO 16073 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Waiting
+2026-01-16T16:53:26.228Z  INFO 16073 --- [Director List] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container directorsdb  Healthy
+2026-01-16T16:53:27.097Z  INFO 16073 --- [Director List] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-16T16:53:27.121Z  INFO 16073 --- [Director List] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 2 JPA repository interfaces.
+2026-01-16T16:53:27.219Z  INFO 16073 --- [Director List] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=454c124e-ab2d-3b8f-bcc1-549dd05fd580
+2026-01-16T16:53:27.484Z  INFO 16073 --- [Director List] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-01-16T16:53:27.490Z  INFO 16073 --- [Director List] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-16T16:53:27.490Z  INFO 16073 --- [Director List] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-16T16:53:27.511Z  INFO 16073 --- [Director List] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 787 ms
+2026-01-16T16:53:27.775Z  INFO 16073 --- [Director List] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:9091/directors_db?ApplicationName=Director+List (PostgreSQL 18.0)
+2026-01-16T16:53:27.814Z  INFO 16073 --- [Director List] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "director_schema"."flyway_schema_history" does not exist yet
+2026-01-16T16:53:27.818Z  INFO 16073 --- [Director List] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.014s)
+2026-01-16T16:53:27.838Z  INFO 16073 --- [Director List] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "director_schema"."flyway_schema_history" ...
+2026-01-16T16:53:27.889Z  INFO 16073 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "director_schema": << Empty Schema >>
+2026-01-16T16:53:27.895Z  INFO 16073 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "director_schema" to version "1 - directors table"
+2026-01-16T16:53:27.927Z  INFO 16073 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "director_schema" to version "2 - movies table"
+2026-01-16T16:53:27.953Z  INFO 16073 --- [Director List] [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "director_schema", now at version v2 (execution time 00:00.031s)
+2026-01-16T16:53:27.981Z  INFO 16073 --- [Director List] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-16T16:53:28.003Z  INFO 16073 --- [Director List] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@46dff505
+2026-01-16T16:53:28.004Z  INFO 16073 --- [Director List] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-16T16:53:28.018Z  INFO 16073 --- [Director List] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-16T16:53:28.042Z  INFO 16073 --- [Director List] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-01-16T16:53:28.245Z  INFO 16073 --- [Director List] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-16T16:53:28.292Z  INFO 16073 --- [Director List] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:9091/directors_db?ApplicationName=Director+List]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: directors_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-16T16:53:28.694Z  INFO 16073 --- [Director List] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-16T16:53:28.696Z  INFO 16073 --- [Director List] [restartedMain] org.hibernate.orm.jdbc.batch             : HHH100501: Automatic JDBC statement batching enabled (maximum batch size 10)
+2026-01-16T16:53:28.698Z  INFO 16073 --- [Director List] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-16T16:53:28.751Z  INFO 16073 --- [Director List] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-16T16:53:28.851Z  WARN 16073 --- [Director List] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-16T16:53:29.107Z DEBUG 16073 --- [Director List] [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : File system access not preferred: using SpringTemplateLoader
+2026-01-16T16:53:29.146Z  INFO 16073 --- [Director List] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-01-16T16:53:29.182Z  INFO 16073 --- [Director List] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-01-16T16:53:29.190Z  INFO 16073 --- [Director List] [restartedMain] p.p.directors.DirectorsApplication       : Started DirectorsApplication in 4.559 seconds (process running for 4.877)
+2026-01-16T16:53:41.233Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-16T16:53:41.234Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-16T16:53:41.243Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2026-01-16T16:53:41.284Z  WARN 16073 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobOperator      : Attempting to launch job: [Directors-Job] which defines an incrementer with additional parameters: [{JobParameter{name='executionId', value=68aa4fd4-96c9-4b3b-8d87-1a692fffc42e, type=class java.lang.String, identifying=true},JobParameter{name='startedAt', value=1768582421263, type=class java.lang.Long, identifying=true}}]. Additional parameters will be ignored.
+2026-01-16T16:53:41.284Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobOperator      : Launching next instance of job: [Directors-Job] with parameters: [{JobParameter{name='run.id', value=1, type=class java.lang.Long, identifying=true}}]
+2026-01-16T16:53:41.285Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobLauncher      : Job: [SimpleJob: [name=Directors-Job]] launched with the following parameters: [{JobParameter{name='run.id', value=1, type=class java.lang.Long, identifying=true}}]
+2026-01-16T16:53:41.288Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] o.s.batch.core.job.SimpleStepHandler     : Executing step: [Director-Import-Step]
+2026-01-16T16:53:41.818Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] o.s.batch.core.step.AbstractStep         : Step: [Director-Import-Step] executed in 528ms
+2026-01-16T16:53:41.818Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] o.s.batch.core.job.SimpleStepHandler     : Executing step: [Movie-Import-step]
+2026-01-16T16:53:41.819Z DEBUG 16073 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterReader      : Reading page 0
+2026-01-16T16:53:41.827Z DEBUG 16073 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterReader      : Reading page 1
+2026-01-16T16:53:42.198Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Abbas Kiarostami (TMDB ID: 119294)
+2026-01-16T16:53:42.453Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Ana Lily Amirpour (TMDB ID: 1289604)
+2026-01-16T16:53:42.641Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Agnès Varda (TMDB ID: 6817)
+2026-01-16T16:53:42.862Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Akira Kurosawa (TMDB ID: 5026)
+2026-01-16T16:53:43.064Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Alfred Hitchcock (TMDB ID: 2636)
+2026-01-16T16:53:43.261Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Anna Muylaert (TMDB ID: 550280)
+2026-01-16T16:53:43.447Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Andrei Tarkovsky (TMDB ID: 8452)
+2026-01-16T16:53:43.640Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Anthony Russo (TMDB ID: 19271)
+2026-01-16T16:53:43.830Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Apichatpong Weerasethakul (TMDB ID: 69759)
+2026-01-16T16:53:44.034Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Ari Aster (TMDB ID: 1145520)
+2026-01-16T16:53:44.225Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Asghar Farhadi (TMDB ID: 229931)
+2026-01-16T16:53:44.413Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Billy Wilder (TMDB ID: 3146)
+2026-01-16T16:53:44.613Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Bong Joon-ho (TMDB ID: 21684)
+2026-01-16T16:53:44.801Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Brian De Palma (TMDB ID: 1150)
+2026-01-16T16:53:44.997Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Cacá Diegues (TMDB ID: 112117)
+2026-01-16T16:53:45.192Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Carl Theodor Dreyer (TMDB ID: 11572)
+2026-01-16T16:53:45.375Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Carlos Saura (TMDB ID: 96369)
+2026-01-16T16:53:45.568Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Charlie Chaplin (TMDB ID: 13848)
+2026-01-16T16:53:46.003Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Chris Columbus (TMDB ID: 10965)
+2026-01-16T16:53:46.196Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] p.p.d.b.d.step2.MovieImporterProcessor   : Getting movie credits for director Christopher Nolan (TMDB ID: 525)
+2026-01-16T16:54:17.965Z  INFO 16073 --- [Director List] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-16T16:54:18.671Z ERROR 16073 --- [Director List] [http-nio-9090-exec-1] o.s.b.core.step.item.ChunkOrientedStep   : Retry exhausted after last attempt in recovery path, but exception is not skippable
+2026-01-16T16:54:18.671Z ERROR 16073 --- [Director List] [http-nio-9090-exec-1] o.s.b.core.step.item.ChunkOrientedStep   : Rolling back chunk transaction
+
+org.hibernate.LazyInitializationException: Could not initialize proxy [pt.pauloortolan.directors.persistence.entities.Director#35f5c47d-42d8-4ef1-8e29-b745b6992201] - no session
+	at org.hibernate.proxy.AbstractLazyInitializer.initialize(AbstractLazyInitializer.java:170) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.proxy.AbstractLazyInitializer.getImplementation(AbstractLazyInitializer.java:323) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor.intercept(ByteBuddyInterceptor.java:42) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.proxy.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:95) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at pt.pauloortolan.directors.persistence.entities.Director$HibernateProxy.getMovies(Unknown Source) ~[main/:na]
+	at pt.pauloortolan.directors.batch.directors.step2.MovieImporterWriter.write(MovieImporterWriter.java:35) ~[main/:na]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.doWrite(ChunkOrientedStep.java:733) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.writeChunk(ChunkOrientedStep.java:683) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processChunkSequentially(ChunkOrientedStep.java:449) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processNextChunk(ChunkOrientedStep.java:389) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.lambda$doExecute$0(ChunkOrientedStep.java:373) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.transaction.support.TransactionOperations.lambda$executeWithoutResult$0(TransactionOperations.java:68) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:137) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.support.TransactionOperations.executeWithoutResult(TransactionOperations.java:67) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.doExecute(ChunkOrientedStep.java:368) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:247) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:131) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:397) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:129) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:293) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher$1.run(TaskExecutorJobLauncher.java:220) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:61) ~[spring-core-7.0.2.jar:7.0.2]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.launchJobExecution(TaskExecutorJobLauncher.java:211) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.run(TaskExecutorJobLauncher.java:109) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.SimpleJobOperator.startNextInstance(SimpleJobOperator.java:294) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobOperator.startNextInstance(TaskExecutorJobOperator.java:133) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.SimpleJobOperator.start(SimpleJobOperator.java:199) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobOperator.start(TaskExecutorJobOperator.java:117) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:370) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222) ~[spring-aop-7.0.2.jar:7.0.2]
+	at jdk.proxy2/jdk.proxy2.$Proxy171.start(Unknown Source) ~[na:na]
+	at pt.pauloortolan.directors.controllers.BatchController.startDirectorsJob(BatchController.java:33) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.15.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.15.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-16T16:54:18.687Z ERROR 16073 --- [Director List] [http-nio-9090-exec-1] o.s.batch.core.step.AbstractStep         : Encountered an error executing step Movie-Import-step in job Directors-Job
+
+org.springframework.batch.core.step.FatalStepExecutionException: Unable to process chunk
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processChunkSequentially(ChunkOrientedStep.java:458) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processNextChunk(ChunkOrientedStep.java:389) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.lambda$doExecute$0(ChunkOrientedStep.java:373) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.transaction.support.TransactionOperations.lambda$executeWithoutResult$0(TransactionOperations.java:68) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:137) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.support.TransactionOperations.executeWithoutResult(TransactionOperations.java:67) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.doExecute(ChunkOrientedStep.java:368) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:247) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:131) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:397) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:129) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:293) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher$1.run(TaskExecutorJobLauncher.java:220) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:61) ~[spring-core-7.0.2.jar:7.0.2]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.launchJobExecution(TaskExecutorJobLauncher.java:211) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.run(TaskExecutorJobLauncher.java:109) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.SimpleJobOperator.startNextInstance(SimpleJobOperator.java:294) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobOperator.startNextInstance(TaskExecutorJobOperator.java:133) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.SimpleJobOperator.start(SimpleJobOperator.java:199) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobOperator.start(TaskExecutorJobOperator.java:117) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:370) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118) ~[spring-tx-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222) ~[spring-aop-7.0.2.jar:7.0.2]
+	at jdk.proxy2/jdk.proxy2.$Proxy171.start(Unknown Source) ~[na:na]
+	at pt.pauloortolan.directors.controllers.BatchController.startDirectorsJob(BatchController.java:33) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.15.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.15.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: org.hibernate.LazyInitializationException: Could not initialize proxy [pt.pauloortolan.directors.persistence.entities.Director#35f5c47d-42d8-4ef1-8e29-b745b6992201] - no session
+	at org.hibernate.proxy.AbstractLazyInitializer.initialize(AbstractLazyInitializer.java:170) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.proxy.AbstractLazyInitializer.getImplementation(AbstractLazyInitializer.java:323) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor.intercept(ByteBuddyInterceptor.java:42) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.proxy.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:95) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at pt.pauloortolan.directors.persistence.entities.Director$HibernateProxy.getMovies(Unknown Source) ~[main/:na]
+	at pt.pauloortolan.directors.batch.directors.step2.MovieImporterWriter.write(MovieImporterWriter.java:35) ~[main/:na]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.doWrite(ChunkOrientedStep.java:733) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.writeChunk(ChunkOrientedStep.java:683) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	at org.springframework.batch.core.step.item.ChunkOrientedStep.processChunkSequentially(ChunkOrientedStep.java:449) ~[spring-batch-core-6.0.1.jar:6.0.1]
+	... 80 common frames omitted
+
+2026-01-16T16:54:18.688Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] o.s.batch.core.step.AbstractStep         : Step: [Movie-Import-step] executed in 36s869ms
+2026-01-16T16:54:18.689Z  INFO 16073 --- [Director List] [http-nio-9090-exec-1] o.s.b.c.l.s.TaskExecutorJobLauncher      : Job: [SimpleJob: [name=Directors-Job]] completed with the following parameters: [{JobParameter{name='run.id', value=1, type=class java.lang.Long, identifying=true}}] and the following status: [FAILED] in 37s400ms
+2026-01-16T16:54:18.723Z  INFO 16073 --- [Director List] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-01-16T16:54:18.727Z  INFO 16073 --- [Director List] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-16T16:54:18.729Z  INFO 16073 --- [Director List] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-16T16:54:18.730Z  INFO 16073 --- [Director List] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

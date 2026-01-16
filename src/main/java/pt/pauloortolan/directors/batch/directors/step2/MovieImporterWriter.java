@@ -48,6 +48,7 @@ public class MovieImporterWriter implements ItemWriter<Credits> {
                 }
 
                 directors.add(director);
+                movie.setDirectors(directors);
                 movieService.save(movie);
                 movies.add(movie);
             }

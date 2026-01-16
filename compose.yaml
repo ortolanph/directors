@@ -1,5 +1,5 @@
 services:
-  guestbookdb:
+  directorsdb:
     image: postgres
     container_name: directorsdb
     restart: always

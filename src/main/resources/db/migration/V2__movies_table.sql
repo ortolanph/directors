@@ -1,7 +1,6 @@
 create table director_schema.movie
 (
     id           uuid primary key,
-    director_id  uuid         not null references director_schema.director (id),
     tmdb_id      integer      not null,
     title        varchar(255) not null,
     release_date date,
