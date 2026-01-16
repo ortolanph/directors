@@ -9,6 +9,7 @@ import pt.pauloortolan.directors.persistence.repositories.DirectorRepository;
 import pt.pauloortolan.directors.pojo.DirectorPojo;
 
 import java.util.List;
+import java.util.UUID;
 
 @Slf4j
 @Service
@@ -38,4 +39,11 @@ public class DirectorService {
         return directorMapper.fromEntity(directorRepository.save(directorToSave));
     }
 
+    public Director saveDirector(Director director) {
+        return directorRepository.save(director);
+    }
+
+    public Director getDirectorById(UUID id) {
+        return directorRepository.getReferenceById(id);
+    }
 }

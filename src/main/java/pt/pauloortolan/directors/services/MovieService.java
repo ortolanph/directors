@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 import pt.pauloortolan.directors.persistence.entities.Movie;
 import pt.pauloortolan.directors.persistence.repositories.MovieRepository;
 
+import java.util.Optional;
+
 @Slf4j
 @Service
 @RequiredArgsConstructor
@@ -13,8 +15,8 @@ public class MovieService {
 
     private final MovieRepository movieRepository;
 
-    public boolean exists(int tmdbId) {
-        return movieRepository.findByTmdbId(tmdbId).isPresent();
+    public Optional<Movie> findByTmdbId(int tmdbId) {
+        return movieRepository.findByTmdbId(tmdbId);
     }
 
     public Movie save(Movie movie) {

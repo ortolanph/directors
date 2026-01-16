@@ -11,6 +11,7 @@ import pt.pauloortolan.directors.persistence.entities.Movie;
 public interface MovieMapper {
 
     @Mapping(target = "id", ignore = true)
+    @Mapping(target = "directors", ignore = true)
     @Mapping(source = "id", target = "tmdbId")
     @Mapping(source = "releaseDate", target = "releaseDate", dateFormat = "yyyy-MM-dd")
     Movie fromCrew(Crew crew);

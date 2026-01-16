@@ -14,6 +14,11 @@ import org.springframework.transaction.PlatformTransactionManager;
 import pt.pauloortolan.directors.batch.directors.step1.DirectorImporterProcessor;
 import pt.pauloortolan.directors.batch.directors.step1.DirectorImporterReader;
 import pt.pauloortolan.directors.batch.directors.step1.DirectorImporterWriter;
+import pt.pauloortolan.directors.batch.directors.step2.MovieImporterProcessor;
+import pt.pauloortolan.directors.batch.directors.step2.MovieImporterReader;
+import pt.pauloortolan.directors.batch.directors.step2.MovieImporterWriter;
+import pt.pauloortolan.directors.persistence.entities.Director;
+import pt.pauloortolan.directors.pojo.Credits;
 import pt.pauloortolan.directors.pojo.DirectorImportPOJO;
 import pt.pauloortolan.directors.pojo.DirectorPojo;
 
@@ -28,6 +33,10 @@ public class DriectorsJob {
     private final DirectorImporterProcessor importerProcessor;
     private final DirectorImporterWriter importerWriter;
 
+    private final MovieImporterReader movieImporterReader;
+    private final MovieImporterProcessor movieImporterProcessor;
+    private final MovieImporterWriter movieImporterWriter;
+
     @Value("${directors.chunk.size}")
     private int chunkSize;
 
@@ -35,16 +44,14 @@ public class DriectorsJob {
     public Job directorJob() {
         return new JobBuilder("Directors-Job", jobRepository)
                 .incrementer(new RunIdIncrementer())
-                .start(importDirectorsStep())
-//                .next(importWatchedTVShowData())
-//                .next(statisticsMakerTVShowData())
-//                .next(aggregatorTVShowData())
+                .start(directorImportStep())
+                .next(movieImportStep())
                 .build();
     }
 
     @Bean
-    public Step importDirectorsStep() {
-        return new StepBuilder("Director-Step-Import", jobRepository)
+    public Step directorImportStep() {
+        return new StepBuilder("Director-Import-Step", jobRepository)
                 .<DirectorImportPOJO, DirectorPojo>chunk(chunkSize)
                 .reader(importerReader)
                 .processor(importerProcessor)
@@ -52,5 +59,13 @@ public class DriectorsJob {
                 .build();
     }
 
-
+    @Bean
+    public Step movieImportStep() {
+        return new StepBuilder("Movie-Import-step", jobRepository)
+                .<Director, Credits>chunk(chunkSize)
+                .reader(movieImporterReader)
+                .processor(movieImporterProcessor)
+                .writer(movieImporterWriter)
+                .build();
+    }
 }

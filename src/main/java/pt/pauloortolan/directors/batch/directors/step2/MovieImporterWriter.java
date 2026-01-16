@@ -5,37 +5,56 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.infrastructure.item.Chunk;
 import org.springframework.batch.infrastructure.item.ItemWriter;
 import org.springframework.stereotype.Component;
-import pt.pauloortolan.directors.integration.pojo.MovieCredits;
+import pt.pauloortolan.directors.integration.pojo.Crew;
 import pt.pauloortolan.directors.mappers.MovieMapper;
+import pt.pauloortolan.directors.persistence.entities.Director;
+import pt.pauloortolan.directors.persistence.entities.Movie;
+import pt.pauloortolan.directors.pojo.Credits;
+import pt.pauloortolan.directors.services.DirectorService;
 import pt.pauloortolan.directors.services.MovieService;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Optional;
+import java.util.Set;
 
 @Slf4j
 @Component
 @RequiredArgsConstructor
-public class MovieImporterWriter implements ItemWriter<MovieCredits> {
-
-    public static final String DIRECTING = "Directing";
-    public static final String DIRECTOR = "Director";
+public class MovieImporterWriter implements ItemWriter<Credits> {
 
     private final MovieService movieService;
 
     private final MovieMapper movieMapper;
 
+    private final DirectorService directorService;
+
     @Override
-    public void write(Chunk<? extends MovieCredits> chunk) throws Exception {
-        chunk
-                .getItems()
-                .stream()
-                .map(MovieCredits::getCrew)
-                .flatMap(List::stream)
-                .filter(crew -> !crew.isAdult())
-                .filter(crew -> DIRECTING.equals(crew.getDepartment()))
-                .filter(crew -> DIRECTOR.equals(crew.getJob()))
-                .filter(crew -> !movieService.exists(crew.getId()))
-                .map(movieMapper::fromCrew)
-                .forEach(movieService::save);
+    public void write(Chunk<? extends Credits> chunk) throws Exception {
+        for(Credits credits : chunk) {
+            Director director = directorService.getDirectorById(credits.director().getId());
+            Set<Movie> movies = director.getMovies();
+
+            for(Crew crewMovie : credits.movieCredits()) {
+                Movie movie = null;
+                Set<Director> directors = new HashSet<>();
+
+                Optional<Movie> existingMovie = movieService.findByTmdbId(crewMovie.getId());
+
+                if(existingMovie.isPresent()) {
+                    movie = existingMovie.get();
+                    directors = movie.getDirectors();
+                } else {
+                    movie = movieMapper.fromCrew(crewMovie);
+                }
+
+                directors.add(director);
+                movieService.save(movie);
+                movies.add(movie);
+            }
+
+            director.setMovies(movies);
+            directorService.saveDirector(director);
+        }
     }
 
 }
