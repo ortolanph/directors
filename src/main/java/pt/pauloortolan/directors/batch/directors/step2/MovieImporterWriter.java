@@ -1,21 +1,17 @@
 package pt.pauloortolan.directors.batch.directors.step2;
 
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.batch.infrastructure.item.Chunk;
-import org.springframework.batch.infrastructure.item.ItemWriter;
-import org.springframework.stereotype.Component;
-import pt.pauloortolan.directors.integration.pojo.Crew;
-import pt.pauloortolan.directors.mappers.MovieMapper;
-import pt.pauloortolan.directors.persistence.entities.Director;
-import pt.pauloortolan.directors.persistence.entities.Movie;
-import pt.pauloortolan.directors.pojo.Credits;
-import pt.pauloortolan.directors.services.DirectorService;
-import pt.pauloortolan.directors.services.MovieService;
+import lombok.*;
+import lombok.extern.slf4j.*;
+import org.springframework.batch.infrastructure.item.*;
+import org.springframework.stereotype.*;
+import pt.pauloortolan.directors.integration.pojo.*;
+import pt.pauloortolan.directors.mappers.*;
+import pt.pauloortolan.directors.persistence.entities.*;
+import pt.pauloortolan.directors.pojo.*;
+import pt.pauloortolan.directors.services.*;
 
-import java.util.HashSet;
-import java.util.Optional;
-import java.util.Set;
+import java.time.*;
+import java.util.*;
 
 @Slf4j
 @Component
@@ -28,33 +24,39 @@ public class MovieImporterWriter implements ItemWriter<Credits> {
 
     private final DirectorService directorService;
 
+    private final DirectorMovieService directorMovieService;
+
     @Override
-    public void write(Chunk<? extends Credits> chunk) throws Exception {
-        for(Credits credits : chunk) {
-            Director director = directorService.getDirectorById(credits.director().getId());
-            Set<Movie> movies = director.getMovies();
+    public void write(Chunk<? extends Credits> chunk) {
+        for (Credits credit : chunk.getItems()) {
+            Director director = directorService.getDirectorById(credit.director().getId());
 
-            for(Crew crewMovie : credits.movieCredits()) {
-                Movie movie = null;
-                Set<Director> directors = new HashSet<>();
+            for (Crew crewMovie : credit.movieCredits()) {
+                Movie movie = movieMapper.fromCrew(crewMovie);
+                Optional<Movie> existingMovie = movieService.findByTmdbId(movie.getTmdbId());
 
-                Optional<Movie> existingMovie = movieService.findByTmdbId(crewMovie.getId());
-
-                if(existingMovie.isPresent()) {
+                if (existingMovie.isPresent()) {
                     movie = existingMovie.get();
-                    directors = movie.getDirectors();
                 } else {
-                    movie = movieMapper.fromCrew(crewMovie);
+                    movie = movieService.save(movie);
                 }
 
-                directors.add(director);
-                movie.setDirectors(directors);
-                movieService.save(movie);
-                movies.add(movie);
-            }
+                DirectorMoviePK directorMoviePK = DirectorMoviePK
+                    .builder()
+                    .directorId(director.getId())
+                    .movieId(movie.getId())
+                    .build();
 
-            director.setMovies(movies);
-            directorService.saveDirector(director);
+                DirectorMovie directorMovie = DirectorMovie
+                    .builder()
+                    .id(directorMoviePK)
+                    .director(director)
+                    .movie(movie)
+                    .updatedAt(LocalDateTime.now())
+                    .build();
+
+                directorMovieService.save(directorMovie);
+            }
         }
     }
 

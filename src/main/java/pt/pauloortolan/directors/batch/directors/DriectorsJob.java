@@ -66,6 +66,8 @@ public class DriectorsJob {
                 .reader(movieImporterReader)
                 .processor(movieImporterProcessor)
                 .writer(movieImporterWriter)
+                .faultTolerant()
+                .retryLimit(10)
                 .build();
     }
 }

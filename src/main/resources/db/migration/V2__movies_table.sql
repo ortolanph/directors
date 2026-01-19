@@ -19,6 +19,8 @@ CREATE TABLE director_schema.director_movie
 (
     director_id UUID NOT NULL,
     movie_id    UUID NOT NULL,
+    created_at  TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at  TIMESTAMP WITH TIME ZONE,
     PRIMARY KEY (director_id, movie_id),
     FOREIGN KEY (director_id) REFERENCES director_schema.director (id) ON DELETE CASCADE,
     FOREIGN KEY (movie_id) REFERENCES director_schema.movie (id) ON DELETE CASCADE

@@ -13,10 +13,7 @@ import java.time.LocalDate;
 @Mapper(componentModel = "spring")
 public interface MovieMapper {
 
-    String DATE_FORMAT = "yyyy-MM-dd";
-
     @Mapping(target = "id", ignore = true)
-    @Mapping(target = "directors", ignore = true)
     @Mapping(source = "id", target = "tmdbId")
     @Mapping(source = "releaseDate", target = "releaseDate",  qualifiedByName = "formatDate")
     Movie fromCrew(Crew crew);

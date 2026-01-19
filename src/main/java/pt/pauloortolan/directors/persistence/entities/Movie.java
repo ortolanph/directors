@@ -1,19 +1,10 @@
 package pt.pauloortolan.directors.persistence.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
+import lombok.*;
 
-import java.time.LocalDate;
-import java.util.Set;
-import java.util.UUID;
+import java.time.*;
+import java.util.*;
 
 @Entity
 @Data
@@ -31,7 +22,9 @@ public class Movie {
     private LocalDate releaseDate;
     private String posterPath;
 
-    @ManyToMany(mappedBy = "movies")
-    private Set<Director> directors;
+    @OneToMany(mappedBy = "movie")
+    @EqualsAndHashCode.Exclude
+    @ToString.Exclude
+    Set<DirectorMovie> directorMovies;
 
 }

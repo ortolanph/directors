@@ -36,7 +36,7 @@ public class MovieImporterProcessor implements ItemProcessor<Director, Credits> 
     private String language;
 
     @Override
-    public @Nullable Credits process(Director item) throws Exception {
+    public @Nullable Credits process(Director item) {
         AuthResponse authResponse = tmdbClient.authenticate();
 
         log.info("Getting movie credits for director {} (TMDB ID: {})", item.getName(), item.getTmdbId());
