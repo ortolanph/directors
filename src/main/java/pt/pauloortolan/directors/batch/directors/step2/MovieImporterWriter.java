@@ -33,7 +33,7 @@ public class MovieImporterWriter implements ItemWriter<Credits> {
 
             for (Crew crewMovie : credit.movieCredits()) {
                 Movie movie = movieMapper.fromCrew(crewMovie);
-                Optional<Movie> existingMovie = movieService.findByTmdbId(movie.getTmdbId());
+                Optional<Movie> existingMovie = movieService.findMovieByTmdbId(movie.getTmdbId());
 
                 if (existingMovie.isPresent()) {
                     movie = existingMovie.get();

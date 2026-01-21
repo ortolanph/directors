@@ -21,4 +21,6 @@ public interface MovieRepository extends JpaRepository<Movie, UUID> {
      where dm.director.tmdbId = :directorTmdbId
     """)
     List<Movie> findByDirectorTmdbId(@Param("directorTmdbId") int directorTmdbId);
+
+    List<Movie> findMoviesByTitleLike(String titleLike);
 }

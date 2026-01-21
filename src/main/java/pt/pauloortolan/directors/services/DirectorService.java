@@ -31,11 +31,16 @@ public class DirectorService {
     }
 
     public Director getDirectorById(UUID id) {
-        return directorRepository.getReferenceById(id);
+        return directorRepository
+                .getReferenceById(id);
     }
 
     public List<DirectorPojo> allDirectors() {
-        return directorRepository.findAll().stream().map(directorMapper::fromEntity).toList();
+        return directorRepository
+                .findAll()
+                .stream()
+                .map(directorMapper::fromEntity)
+                .toList();
     }
 
     public List<DirectorPojo> findByMovie(int movieTmdbId) {
@@ -47,6 +52,22 @@ public class DirectorService {
     }
 
     public DirectorPojo findDirectorById(UUID id) {
-        return directorMapper.fromEntity(directorRepository.getReferenceById(id));
+        return directorMapper
+                .fromEntity(directorRepository.getReferenceById(id));
+    }
+
+    public DirectorPojo findByTmbdId(int id) {
+        return directorRepository
+                .findByTmdbId(id)
+                .map(directorMapper::fromEntity)
+                .orElse(null);
+    }
+
+    public List<DirectorPojo> findDirectorsByNameLike(String nameLike) {
+        return directorRepository
+                .findDirectorsByNameLike(nameLike)
+                .stream()
+                .map(directorMapper::fromEntity)
+                .toList();
     }
 }
