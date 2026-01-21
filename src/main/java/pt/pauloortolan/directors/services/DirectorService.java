@@ -19,31 +19,34 @@ public class DirectorService {
     private final DirectorRepository directorRepository;
     private final DirectorMapper directorMapper;
 
-    public List<DirectorPojo> getAllDirectorNames() {
-        return directorRepository
-                .findAll()
-                .stream()
-                .map(directorMapper::fromEntity)
-                .toList();
-    }
-
     public boolean checkDirector(int tmdbId) {
         return directorRepository
                 .findByTmdbId(tmdbId)
                 .isPresent();
     }
 
-
-    public DirectorPojo saveDirector(DirectorPojo director) {
+    public void saveDirector(DirectorPojo director) {
         Director directorToSave = directorMapper.fromPojo(director);
-        return directorMapper.fromEntity(directorRepository.save(directorToSave));
-    }
-
-    public Director saveDirector(Director director) {
-        return directorRepository.save(director);
+        directorMapper.fromEntity(directorRepository.save(directorToSave));
     }
 
     public Director getDirectorById(UUID id) {
         return directorRepository.getReferenceById(id);
+    }
+
+    public List<DirectorPojo> allDirectors() {
+        return directorRepository.findAll().stream().map(directorMapper::fromEntity).toList();
+    }
+
+    public List<DirectorPojo> findByMovie(int movieTmdbId) {
+        return directorRepository
+                .findDirectorsByMovieTmdbId(movieTmdbId)
+                .stream()
+                .map(directorMapper::fromEntity)
+                .toList();
+    }
+
+    public DirectorPojo findDirectorById(UUID id) {
+        return directorMapper.fromEntity(directorRepository.getReferenceById(id));
     }
 }

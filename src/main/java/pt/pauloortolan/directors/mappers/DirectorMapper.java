@@ -13,6 +13,7 @@ public interface DirectorMapper {
 
     DirectorPojo fromEntity(Director director);
 
+    @Mapping(target="directorMovies", ignore = true)
     Director fromPojo(DirectorPojo directorPojo);
 
     @Mapping(target = "id", ignore = true)
