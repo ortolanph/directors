@@ -1,17 +1,23 @@
 package pt.pauloortolan.directors.batch.directors.step2;
 
-import lombok.*;
-import lombok.extern.slf4j.*;
-import org.springframework.batch.infrastructure.item.*;
-import org.springframework.stereotype.*;
-import pt.pauloortolan.directors.integration.pojo.*;
-import pt.pauloortolan.directors.mappers.*;
-import pt.pauloortolan.directors.persistence.entities.*;
-import pt.pauloortolan.directors.pojo.*;
-import pt.pauloortolan.directors.services.*;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.batch.infrastructure.item.Chunk;
+import org.springframework.batch.infrastructure.item.ItemWriter;
+import org.springframework.stereotype.Component;
+import pt.pauloortolan.directors.integration.pojo.Crew;
+import pt.pauloortolan.directors.mappers.MovieMapper;
+import pt.pauloortolan.directors.persistence.entities.Director;
+import pt.pauloortolan.directors.persistence.entities.DirectorMovie;
+import pt.pauloortolan.directors.persistence.entities.DirectorMoviePK;
+import pt.pauloortolan.directors.persistence.entities.Movie;
+import pt.pauloortolan.directors.pojo.Credits;
+import pt.pauloortolan.directors.services.DirectorMovieService;
+import pt.pauloortolan.directors.services.DirectorService;
+import pt.pauloortolan.directors.services.MovieService;
 
-import java.time.*;
-import java.util.*;
+import java.time.LocalDateTime;
+import java.util.Optional;
 
 @Slf4j
 @Component
@@ -42,18 +48,18 @@ public class MovieImporterWriter implements ItemWriter<Credits> {
                 }
 
                 DirectorMoviePK directorMoviePK = DirectorMoviePK
-                    .builder()
-                    .directorId(director.getId())
-                    .movieId(movie.getId())
-                    .build();
+                        .builder()
+                        .directorId(director.getId())
+                        .movieId(movie.getId())
+                        .build();
 
                 DirectorMovie directorMovie = DirectorMovie
-                    .builder()
-                    .id(directorMoviePK)
-                    .director(director)
-                    .movie(movie)
-                    .updatedAt(LocalDateTime.now())
-                    .build();
+                        .builder()
+                        .id(directorMoviePK)
+                        .director(director)
+                        .movie(movie)
+                        .updatedAt(LocalDateTime.now())
+                        .build();
 
                 directorMovieService.save(directorMovie);
             }

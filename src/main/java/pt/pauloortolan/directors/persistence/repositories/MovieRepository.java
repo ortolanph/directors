@@ -4,7 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import pt.pauloortolan.directors.persistence.entities.Movie;
-import pt.pauloortolan.directors.pojo.MoviePojo;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,12 +14,11 @@ public interface MovieRepository extends JpaRepository<Movie, UUID> {
     Optional<Movie> findByTmdbId(int tmdbId);
 
     @Query(
-    """
-    select dm.movie
-      from DirectorMovie dm
-     where dm.director.tmdbId = :directorTmdbId
-    """)
+            """
+                    select dm.movie
+                      from DirectorMovie dm
+                     where dm.director.tmdbId = :directorTmdbId
+                    """)
     List<Movie> findByDirectorTmdbId(@Param("directorTmdbId") int directorTmdbId);
 
-    List<Movie> findMoviesByTitleLike(String titleLike);
 }

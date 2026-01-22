@@ -4,8 +4,8 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
-import pt.pauloortolan.directors.integration.pojo.MovieCredits;
 import pt.pauloortolan.directors.integration.pojo.AuthResponse;
+import pt.pauloortolan.directors.integration.pojo.MovieCredits;
 
 @FeignClient(name = "tmdb-client", url = "${tmdb.base-url}", configuration = TMDBFeignConfig.class)
 public interface TMDBClient {

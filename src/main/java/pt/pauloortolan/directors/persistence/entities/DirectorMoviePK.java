@@ -1,10 +1,14 @@
 package pt.pauloortolan.directors.persistence.entities;
 
-import jakarta.persistence.*;
-import lombok.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Embeddable;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.io.*;
-import java.util.*;
+import java.io.Serializable;
+import java.util.UUID;
 
 @Data
 @Builder

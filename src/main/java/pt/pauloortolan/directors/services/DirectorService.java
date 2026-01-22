@@ -63,11 +63,4 @@ public class DirectorService {
                 .orElse(null);
     }
 
-    public List<DirectorPojo> findDirectorsByNameLike(String nameLike) {
-        return directorRepository
-                .findDirectorsByNameLike(nameLike)
-                .stream()
-                .map(directorMapper::fromEntity)
-                .toList();
-    }
 }

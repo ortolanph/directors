@@ -53,13 +53,4 @@ public class MovieService {
                 .orElse(null);
     }
 
-    public List<MoviePojo> findMoviesByTitleLike(String nameLike) {
-        return movieRepository
-                .findMoviesByTitleLike(nameLike)
-                .stream()
-                .map(movieMapper::fromEntity)
-                .filter(m -> m.getReleaseDate() != null)
-                .sorted(Comparator.comparing(MoviePojo::getReleaseDate))
-                .toList();
-    }
 }

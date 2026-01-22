@@ -1,10 +1,10 @@
 package pt.pauloortolan.directors.services;
 
-import lombok.*;
-import lombok.extern.slf4j.*;
-import org.springframework.stereotype.*;
-import pt.pauloortolan.directors.persistence.entities.*;
-import pt.pauloortolan.directors.persistence.repositories.*;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+import pt.pauloortolan.directors.persistence.entities.DirectorMovie;
+import pt.pauloortolan.directors.persistence.repositories.DirectorMovieRepository;
 
 @Slf4j
 @Service

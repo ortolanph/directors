@@ -1,7 +1,6 @@
 package pt.pauloortolan.directors.integration;
 
 import feign.RequestInterceptor;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
