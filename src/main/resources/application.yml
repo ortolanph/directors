@@ -6,6 +6,8 @@ directors:
     size: 20
   source:
     file: data/directors.csv
+  template:
+    file: movie_report.ftl
 
 tmdb:
   base-url: https://api.themoviedb.org/3
