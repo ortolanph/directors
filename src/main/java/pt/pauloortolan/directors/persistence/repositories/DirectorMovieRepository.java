@@ -14,7 +14,7 @@ public interface DirectorMovieRepository extends JpaRepository<DirectorMovie, Di
             select dm.movie
               from DirectorMovie dm
              where dm.director.tmdbId = :tmdbId
-               and dm.movie.tmdId in :movieIds
+               and dm.movie.tmdbId in :movieIds
             """)
     List<Movie> findAllMoviesByDirectorTmdbId(int tmdbId, List<Integer> movieIds);
 

@@ -8,18 +8,22 @@ import freemarker.template.TemplateException;
 import lombok.Builder;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.*;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.*;
 import org.springframework.ui.freemarker.FreeMarkerConfigurationFactory;
 import pt.pauloortolan.directors.pojo.DirectorResume;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.StringWriter;
+import java.time.*;
+import java.time.format.*;
 import java.util.HashMap;
 import java.util.Map;
 
-@Data
-@Builder
+@Slf4j
+@Service
 @RequiredArgsConstructor
 public class ReportService {
 
@@ -33,6 +37,7 @@ public class ReportService {
 
         dataModel.put("directorName", directorResume.getName());
         dataModel.put("movies", directorResume.getMovies());
+        dataModel.put("generatedOn", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
 
         try {
             Configuration configuration = freeMarkerConfigurationFactory.createConfiguration();

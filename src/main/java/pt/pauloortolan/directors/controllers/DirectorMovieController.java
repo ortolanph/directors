@@ -6,11 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pt.pauloortolan.directors.pojo.DirectorResume;
 import pt.pauloortolan.directors.services.DirectorMovieService;
 import pt.pauloortolan.directors.services.ReportService;
@@ -30,8 +26,8 @@ public class DirectorMovieController {
     @Value("${directors.template.file}")
     private String template;
 
-    @PostMapping(value = "/{id}", produces = "application/pdf")
-    public ResponseEntity<byte[]> compose(@PathVariable("id") int directorId, @RequestParam("movies[]") List<Integer> movies) {
+    @GetMapping(value = "/{id}", produces = "application/pdf")
+    public ResponseEntity<byte[]> compose(@PathVariable("id") int directorId, @RequestParam("movies") List<Integer> movies) {
         DirectorResume directorResume = directorMovieService.generateReport(directorId, movies);
         byte[] documentData = reportService.generateReport(directorResume);
 

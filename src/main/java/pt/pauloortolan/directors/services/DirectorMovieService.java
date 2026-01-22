@@ -1,17 +1,14 @@
 package pt.pauloortolan.directors.services;
 
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
-import pt.pauloortolan.directors.mappers.MovieMapper;
-import pt.pauloortolan.directors.persistence.entities.DirectorMovie;
-import pt.pauloortolan.directors.persistence.repositories.DirectorMovieRepository;
-import pt.pauloortolan.directors.pojo.DirectorPojo;
-import pt.pauloortolan.directors.pojo.DirectorResume;
-import pt.pauloortolan.directors.pojo.MoviePojo;
+import lombok.*;
+import lombok.extern.slf4j.*;
+import org.springframework.stereotype.*;
+import pt.pauloortolan.directors.mappers.*;
+import pt.pauloortolan.directors.persistence.entities.*;
+import pt.pauloortolan.directors.persistence.repositories.*;
+import pt.pauloortolan.directors.pojo.*;
 
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 @Slf4j
 @Service
@@ -22,7 +19,7 @@ public class DirectorMovieService {
 
     private final DirectorService directorService;
 
-    private MovieMapper movieMapper;
+    private final MovieMapper movieMapper;
 
     public DirectorMovie save(DirectorMovie directorMovie) {
         return repository.save(directorMovie);
@@ -33,16 +30,18 @@ public class DirectorMovieService {
 
         if (!Objects.isNull(director)) {
             List<MoviePojo> selectedMovies = repository
-                    .findAllMoviesByDirectorTmdbId(director.getTmdbId(), movies)
-                    .stream()
-                    .map(movieMapper::fromEntity)
-                    .toList();
+                .findAllMoviesByDirectorTmdbId(director.getTmdbId(), movies)
+                .stream()
+                .filter(movie -> movie.getReleaseDate() != null)
+                .sorted(Comparator.comparing(Movie::getReleaseDate))
+                .map(movieMapper::fromEntity)
+                .toList();
 
             return DirectorResume
-                    .builder()
-                    .name(director.getName())
-                    .movies(selectedMovies.stream().map(movieMapper::toResume).toList())
-                    .build();
+                .builder()
+                .name(director.getName())
+                .movies(selectedMovies.stream().map(movieMapper::toResume).toList())
+                .build();
         }
 
         return null;
