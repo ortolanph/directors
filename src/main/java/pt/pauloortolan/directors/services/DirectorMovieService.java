@@ -1,14 +1,20 @@
 package pt.pauloortolan.directors.services;
 
-import lombok.*;
-import lombok.extern.slf4j.*;
-import org.springframework.stereotype.*;
-import pt.pauloortolan.directors.mappers.*;
-import pt.pauloortolan.directors.persistence.entities.*;
-import pt.pauloortolan.directors.persistence.repositories.*;
-import pt.pauloortolan.directors.pojo.*;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+import pt.pauloortolan.directors.mappers.MovieMapper;
+import pt.pauloortolan.directors.persistence.entities.DirectorMovie;
+import pt.pauloortolan.directors.persistence.entities.Movie;
+import pt.pauloortolan.directors.persistence.repositories.DirectorMovieRepository;
+import pt.pauloortolan.directors.pojo.DirectorPojo;
+import pt.pauloortolan.directors.pojo.DirectorResume;
+import pt.pauloortolan.directors.pojo.MoviePojo;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Objects;
 
 @Slf4j
 @Service
@@ -29,19 +35,33 @@ public class DirectorMovieService {
         DirectorPojo director = directorService.findByTmbdId(directorId);
 
         if (!Objects.isNull(director)) {
-            List<MoviePojo> selectedMovies = repository
-                .findAllMoviesByDirectorTmdbId(director.getTmdbId(), movies)
-                .stream()
-                .filter(movie -> movie.getReleaseDate() != null)
-                .sorted(Comparator.comparing(Movie::getReleaseDate))
-                .map(movieMapper::fromEntity)
-                .toList();
+            List<Movie> selectedDirectorsMovie = new ArrayList<>();
+
+            if (movies.isEmpty()) {
+                selectedDirectorsMovie = repository
+                        .findAllMoviesByDirectorTmdbId(directorId);
+
+            } else {
+                selectedDirectorsMovie = repository
+                        .findMoviesByDirectorTmdbId(director.getTmdbId(), movies);
+
+            }
+
+            List<MoviePojo> selectedMovies = selectedDirectorsMovie.stream()
+                    .filter(movie -> movie.getReleaseDate() != null)
+                    .sorted(Comparator.comparing(Movie::getReleaseDate))
+                    .map(movieMapper::fromEntity)
+                    .toList();
 
             return DirectorResume
-                .builder()
-                .name(director.getName())
-                .movies(selectedMovies.stream().map(movieMapper::toResume).toList())
-                .build();
+                    .builder()
+                    .name(director.getName())
+                    .movies(
+                            selectedMovies
+                                    .stream()
+                                    .map(movieMapper::toResume)
+                                    .toList())
+                    .build();
         }
 
         return null;

@@ -8,6 +8,8 @@ directors:
     file: data/directors.csv
   template:
     file: movie_report.ftl
+  surrogate:
+    posters: data/no_poster_1.png, data/no_poster_2.png, data/no_poster_3.png, data/no_poster_4.png
 
 tmdb:
   base-url: https://api.themoviedb.org/3

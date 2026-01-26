@@ -16,6 +16,12 @@ public interface DirectorMovieRepository extends JpaRepository<DirectorMovie, Di
              where dm.director.tmdbId = :tmdbId
                and dm.movie.tmdbId in :movieIds
             """)
-    List<Movie> findAllMoviesByDirectorTmdbId(int tmdbId, List<Integer> movieIds);
+    List<Movie> findMoviesByDirectorTmdbId(int tmdbId, List<Integer> movieIds);
 
+    @Query("""
+            select dm.movie
+              from DirectorMovie dm
+             where dm.director.tmdbId = :tmdbId
+            """)
+    List<Movie> findAllMoviesByDirectorTmdbId(int tmdbId);
 }
