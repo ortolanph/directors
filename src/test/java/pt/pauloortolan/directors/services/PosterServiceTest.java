@@ -8,9 +8,9 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(SpringExtension.class)
-class ImageConverterServiceTest {
+class PosterServiceTest {
 
-    private final ImageConverterService imageConverterService = new ImageConverterService();
+    private final PosterService imageConverterService = new PosterService();
 
     @Test
     @DisplayName("Should get mimetype PNG")

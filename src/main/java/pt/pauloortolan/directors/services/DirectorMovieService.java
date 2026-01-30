@@ -10,11 +10,13 @@ import pt.pauloortolan.directors.persistence.repositories.DirectorMovieRepositor
 import pt.pauloortolan.directors.pojo.DirectorPojo;
 import pt.pauloortolan.directors.pojo.DirectorResume;
 import pt.pauloortolan.directors.pojo.MoviePojo;
+import pt.pauloortolan.directors.pojo.MovieResume;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
+import java.util.function.Function;
 
 @Slf4j
 @Service
@@ -26,6 +28,8 @@ public class DirectorMovieService {
     private final DirectorService directorService;
 
     private final MovieMapper movieMapper;
+
+    private final PosterService posterService;
 
     public DirectorMovie save(DirectorMovie directorMovie) {
         return repository.save(directorMovie);
@@ -60,10 +64,31 @@ public class DirectorMovieService {
                             selectedMovies
                                     .stream()
                                     .map(movieMapper::toResume)
+                                    .map(downloadPosterFunction())
                                     .toList())
                     .build();
         }
 
         return null;
     }
+
+    private Function<MovieResume, MovieResume> downloadPosterFunction() {
+        return (input) ->
+        {
+            try {
+                return MovieResume
+                        .builder()
+                        .title(input.getTitle())
+                        .poster(
+                                (Objects.isNull(input.getPoster())) ?
+                                        posterService.convertLocalImageToBase64(posterService.getRandomSurrogatePoster()) :
+                                        posterService.convertImageToBase64(input.getPoster()))
+                        .releaseDate(input.getReleaseDate())
+                        .build();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        };
+    }
+
 }

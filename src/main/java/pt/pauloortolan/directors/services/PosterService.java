@@ -18,7 +18,7 @@ import java.util.Random;
 @Slf4j
 @Service
 @RequiredArgsConstructor
-public class ImageConverterService {
+public class PosterService {
 
     @Value("${directors.surrogate.posters}")
     private List<String> defaultPosters;
