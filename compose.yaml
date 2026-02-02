@@ -15,11 +15,11 @@ services:
 #      - directorsdata:/var/lib/postgresql/data
       - ./initdb:/docker-entrypoint-initdb.d
     networks:
-      - guestbooknetwork
+      - directorsnetwork
 
 #volumes:
 #  directorsdata:
 
 networks:
-  guestbooknetwork:
+  directorsnetwork:
     driver: bridge
